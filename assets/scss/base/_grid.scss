@@ -1,0 +1,131 @@
+
+// SMALL
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.row.no-gutters {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.col {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.col.no-gutters {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+@for $i from 1 to 13 {
+    .sm-#{$i} {
+        flex: 0 0 ($i / 12) * 100%;
+        max-width: ($i / 12) * 100%;
+    }
+}
+
+.sm-2\.4 {
+    flex: 0 0 20%;
+    max-width: 20%;
+}
+
+.sm-4\.8 {
+    flex: 0 0 40%;
+    max-width: 40%;
+}
+
+.sm-7\.2 {
+    flex: 0 0 60%;
+    max-width: 60%;
+}
+
+.sm-9\.6 {
+    flex: 0 0 80%;
+    max-width: 80%;
+}
+
+// MEDIUM
+@media (min-width: 768px) {
+    .row {
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+
+    .col {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    @for $i from 1 to 13 {
+        .md-#{$i} {
+            flex: 0 0 ($i / 12) * 100%;
+            max-width: ($i / 12) * 100%;
+        }
+    }
+
+    .md-2\.4 {
+        flex: 0 0 20%;
+        max-width: 20%;
+    }
+    
+    .lg-4\.8 {
+        flex: 0 0 40%;
+        max-width: 40%;
+    }
+    
+    .lg-7\.2 {
+        flex: 0 0 60%;
+        max-width: 60%;
+    }
+    
+    .md-9\.6 {
+        flex: 0 0 80%;
+        max-width: 80%;
+    }
+
+}
+
+// LARGE
+@media (min-width: 992px) {
+    .row {
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+
+    .col {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    @for $i from 1 to 13 {
+        .lg-#{$i} {
+            flex: 0 0 ($i / 12) * 100%;
+            max-width: ($i / 12) * 100%;
+        }
+    }
+        
+    .lg-2\.4 {
+        flex: 0 0 20%;
+        max-width: 20%;
+    }
+
+    .lg-4\.8 {
+        flex: 0 0 40%;
+        max-width: 40%;
+    }
+
+    .lg-7\.2 {
+        flex: 0 0 60%;
+        max-width: 60%;
+    }
+
+    .lg-9\.6 {
+        flex: 0 0 80%;
+        max-width: 80%;
+    }
+}

@@ -1,0 +1,2686 @@
+@import '../abstracts/mixin';
+// COLOR
+$red-color: #dc3545;
+$pink-color: #e83e8c;
+$orange-color: #fd7e14;
+$yellow-color: #ffc107;
+$green-color: #28a745;
+$teal-color: #20c997;
+$cyan-color: #17a2b8;
+$blue-color: #007bff;
+$indigo-color: #6610f2;
+$purple-color: #6f42c1;
+$black-color: #000;
+$dark-gray-color: #343a40;
+$gray-color: #6c757d;
+$secondary-color: #6c757d;
+$white-color: #fff;
+$danger-color:#dc3545;
+$warning-color: #ffc107;
+$success-color: #28a745;
+$primary-color: #007bff;
+$info-color: #17a2b8;
+$light-color: #f8f9fa;
+$dark-color: #343a40;
+
+// MAIN-MENU
+$w-menu-mega: 32rem;
+$w-menu-mega-XXL: 29.5rem;
+$w-menu-slider: 71.5rem;
+$w-menu-slider-XXL: 60.5rem;
+$w-menu-slider-XL: 75.5rem;
+$w-menu-slider-LG: 65.5rem;
+$w-banner-right: 24.3rem;
+$w-banner-right-XXL: 24rem;
+
+$h-menu-mega: 40rem;
+$h-menu-mega-XL: 39rem;
+$h-menu-mega-LG: 52rem;
+$h-menu-mega-MD: 38.6rem;
+$h-menu-mega-XS: 19.5rem;
+
+$h-slide: 32.4rem;
+$h-slide-XXL: 28.5rem;
+$h-slide-XL: 26.2rem;
+$h-slide-LG: 23.7rem;
+
+// RESPONSIVE
+$XXL: 1399.98px;
+$XL: 1299.98px;
+$LG: 1199.98px;
+$MD: 991.98px;
+$SM: 767.98px;
+$XS: 575.98px;
+
+@mixin minWidth ($breakpoint) {
+    @media only screen and (min-width: $breakpoint) {
+        @content;
+    }
+}
+
+@mixin maxWidth ($breakpoint) {
+    @media only screen and (max-width: $breakpoint) {
+        @content;
+    }
+}
+
+// ATOMIC
+
+.lg\:container-fluid {
+    @include maxWidth($LG) {
+        max-width: 100% !important;
+        margin: 0 auto !important;
+        padding: 0 !important;
+    }
+}
+
+.z-10 {
+    z-index: 10;
+}
+
+.z-2 {
+    z-index: 2;
+}
+
+.lg\:fxd-column {
+    @include maxWidth($LG) {
+        flex-direction: column;
+    }
+}
+
+.sm\:d-none {
+    @include maxWidth($SM) {
+        display: none !important;
+    }
+}
+
+.sm\:d-block {
+    @include maxWidth($SM) {
+        display: block !important;
+    }
+}
+
+.lg\:d-none {
+    @include maxWidth($LG) {
+        display: none !important;
+    }
+}
+.lg\:d-flex {
+    @include maxWidth($LG) {
+        display: flex !important;
+    }
+}
+
+.lg\:d-none {
+    @include maxWidth($LG) {
+        display: none !important;
+    }
+}
+
+.bxsh-black-0\.3 {
+    box-shadow: .5rem 0 .5rem 0 rgba($color: #000000, $alpha: .3);
+}
+
+.fz-1\.8 {
+    font-size: 1.8rem;
+}
+
+.mb-1 {
+    margin-bottom: 1rem;
+}
+
+// BASE
+html {
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    max-width: 140rem;
+    padding: 0 4rem;
+    width: 100%;
+    margin: 0 auto;
+
+    @include maxWidth($XXL) {
+        max-width: 124rem;
+    }
+    
+    @include maxWidth($XL) {
+        max-width: 114rem;
+    }
+
+    @include maxWidth($LG) {
+        max-width: 96rem;
+        padding: 0 1.5rem;
+    }
+    @include maxWidth($SM) {
+        padding: 0 1.5rem;
+    }
+}
+
+.btn-header {
+    width: 11rem;
+    height: 4rem;
+    line-height: 4rem;
+    text-align: center;
+    border-radius: .6rem;
+    font-size: 1.6rem;
+}
+
+// HEADER
+.header {
+    &__top {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 6.5rem;
+        background: white;
+        box-shadow: .5rem 0 .5rem 0 rgba(0, 0, 0, .3);
+        z-index: 1000;
+
+        @include maxWidth($SM) {
+            padding: 0;
+        }
+
+
+        &-wrap {
+            display: flex;
+            justify-content: center;
+            max-width: 140rem;
+            width: 100%;
+            height: 6.5rem;
+            margin: 0 auto;
+
+            @include maxWidth($XXL) {
+                width: $w-menu-mega + $w-menu-slider-XXL + $w-banner-right;
+            }
+
+            @include maxWidth($XL) {
+                width: $w-menu-mega-XXL + $w-menu-slider-XL + 1rem;
+            }
+
+            @include maxWidth($LG) {
+                width: 100%;
+                max-width: 100%;
+            }
+
+            .left {
+                
+                display: flex;
+                width: 66.5%;
+                @include maxWidth($LG) {
+                    width: calc(100% - 4.5rem);
+                }
+
+                &__logo {
+
+                    background: url('../img/index/bg-noel.jpg');
+                    display: block;
+                    max-width: 10.5rem;
+                    width: 10.8rem;
+                    height: 10.5rem;
+                    transition: all .5s ease-out;
+                    @include bg-img;
+
+                    @include maxWidth($LG) {
+                        max-width: 6.5rem !important;
+                        width: 100%;
+                        height: 6.5rem !important;
+                    }
+                }
+
+                &__box {
+                    display: flex;
+                    flex: 1;
+                    align-items: center;
+                    height: 100%;
+
+                    &-wrap {
+
+                        position: relative;
+                        display: flex;
+                        width: 58%;
+                        font-size: 1.8rem;
+                        color: #6DAAD2;
+
+                        @include maxWidth($XXL) {
+                            max-width: 36rem;
+                            height: 3.7rem;
+                        }
+                        @include maxWidth($LG) {
+                            max-width: 65rem;
+                            width: 100%;
+                            margin: 0 auto;
+                        }
+
+                        .search {
+
+
+                            max-width: 45.5rem;
+                            width: 100%;
+                            height: 4rem;
+                            margin-left: 2rem;
+                            padding-left: 1.4rem;
+                            font-size: 1.6rem;
+                            border-radius: .6rem;
+                            color: $gray-color;
+                            background-color: #F2F3F5;
+
+                            @include maxWidth($XXL) {
+                                max-width: 36rem;
+                                height: 3.7rem;
+                            }
+
+                            @include maxWidth($LG) {
+                                max-width: 65rem;
+                                margin: 0 2rem;
+                            }
+                            @include maxWidth($MD) {
+                                margin: 0 8rem;
+                            }
+                            @include maxWidth($XS) {
+                                margin: 0 2rem;
+                            }
+                        }
+
+                        .icon {
+                            position: absolute;
+                            top: 1rem;
+                            right: 1rem;
+                            @include maxWidth($LG) {
+                                right: 3rem;
+                            }
+                            @include maxWidth($MD) {
+                                right: 9rem;
+                            }
+                            @include maxWidth($XS) {
+                                right: 3rem;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .right {
+                display: flex;
+                align-items: center;
+
+                &__hotline {
+                    display: flex;
+                    align-items: center;
+                    height: 100%;
+                    margin-right: 3rem;
+                    padding: 0 3rem;
+                    border-left: 1px solid rgba(0, 0, 0, .1);
+                    border-right: 1px solid rgba(0, 0, 0, .1);
+                    font-size: 1.6rem;
+                    font-weight: 600;
+                    color: #FF9800;
+                    span {
+                        font-size: 2rem;
+                        margin-right: 1rem;
+                    }
+
+                    @include maxWidth($MD) {
+                        padding: 0 1rem;
+                        font-size: 1.4rem;
+                    }
+                }
+
+                &__btn {
+                    display: flex;
+                    align-items: center;
+
+                    &-login {
+                        @extend .btn-header;
+                        margin-right: 2rem;
+                        border: 1px solid rgba(0, 0, 0, .3);
+                        color: $gray-color;
+                        background-color: white;
+                    }
+
+                    &-register {
+                        @extend .btn-header;
+                        border: 1px solid #fb930c;
+                        color: white;
+                        background-color: #fb930c;
+                    }
+                }
+            }
+
+            .nav-show {
+                align-items: center;
+                justify-content: center;
+                width: 4rem;
+                height: 4rem;
+                margin: 1.5rem .5rem 0 0;
+                border-radius: 0.6rem;
+                color: white;
+                background-color: #42ACF1;
+                font-size: 3rem;
+            }
+
+            .nav-menu {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                background-color: white;
+                transform: translateX(-100%);
+                transition: all .3s ease-out;
+                @include maxWidth($LG) {
+                    display: block;
+                }
+
+                .btn-close {
+                    position: absolute;
+                    top: 2rem;
+                    right: 2.5rem;
+                    font-size: 3rem;
+                    color: $dark-color;
+                }
+
+                >ul {
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                    margin-top: 5rem;
+
+                    >li {
+                        height: 5.5rem;
+                        line-height: 5.5rem;
+                        font-size: 1.4rem;
+                        font-weight: 600;
+                        border-bottom: 1px solid rgba(0, 0, 0, .3);
+
+                        >a {
+                            margin-left: 1.5rem;
+                            color: #888;
+                        }
+                    }
+
+                    .dropdown-mobile {
+                        min-height: 5.5rem;
+                        height: 100%;
+
+                        svg {
+                            color: #888;
+                        }
+
+                        .dropdown-content {
+                            display: none;
+                            top: 0;
+                            flex-direction: column;
+                            width: 100%;
+                            margin-top: -1.5rem;
+
+                            li {
+                                height: 3rem;
+                                line-height: 3rem;
+                                font-weight: 500;
+
+                                a {
+                                    margin-left: 3rem;
+                                    color: #888;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .download-app {
+                    @include maxWidth($XS) {
+                        padding: 1rem 1.5rem;
+                    }
+
+                    display: flex;
+                    max-width: 66.5rem;
+                    width: 95%;
+                    padding: 1rem 4rem;
+                    margin: 9rem 1rem 0;
+                    background-color: #fff;
+                    box-shadow: 0 0 1rem .1rem rgba(0, 0, 0, .3);
+
+                    .logo {
+                        @include maxWidth($XS) {
+                            margin-right: 0.5rem;
+                        }
+
+                        background: url('../img/index/logo-bg.svg');
+                        min-width: 8.5rem;
+                        height: 8.5rem;
+                        margin-right: 5.5rem;
+                        border-radius: .6rem;
+                    }
+
+                    .download-app__wrap {
+                        p {
+                            font-size: 1.4rem;
+                            font-weight: 600;
+                            color: #888;
+                        }
+
+                        button {
+                            position: absolute;
+                            top: 4rem;
+                            right: 0rem;
+                            height: 3rem;
+                            line-height: 3rem;
+                            padding: 0 1rem;
+                            border-radius: .6rem;
+                            font-weight: 600;
+                            color: white;
+                            background-color: #0773B8;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+
+    .header__bottom {
+        margin: 6.5rem auto 0;
+        background-color: #F7F8FA;
+        @include maxWidth($LG) {
+            display: none;
+        }
+        .header__bottom-wrap {
+            width: 100%;
+
+            @include maxWidth($XXL) {
+                width: $w-menu-mega-XXL + $w-menu-slider-XXL;
+            }
+
+            .nav {
+                margin-left: 11rem;
+
+                &__list {
+                    height: 4rem;
+                    display: flex;
+
+                    &-item {
+                        height: 100%;
+                        line-height: 4rem;
+                        margin: 0 1.2rem;
+                        font-size: 1.4rem;
+                        font-weight: 600;
+                        cursor: pointer;
+
+                        a {
+                            color: #888;
+                        }
+                    }
+
+                    &-item:nth-child(3) {
+                        svg {
+                            color: #888;
+                        }
+                    }
+
+                    &-item:hover {
+                        a {
+                            color: #1587CB;
+                        }
+                    }
+
+                    .dropdown {
+                        position: relative;
+
+                        &__content {
+                            display: none;
+                            position: absolute;
+                            top: 4rem;
+                            flex-direction: column;
+                            width: 20rem;
+                            background-color: #fff;
+                            border-radius: 0 0 .8rem .8rem;
+                            z-index: 2;
+                            
+                            >li {
+                                width: 20rem;
+                                height: 4rem;
+                                padding-left: 1rem;
+                                line-height: 4rem;
+                                font-size: 1.4rem;
+                                font-weight: 600;
+                                &:hover {
+                                    background-color: #65A6D0;
+                                }
+                                &:last-child {
+                                    border-radius: 0 0 .8rem .8rem;
+                                }
+                                >a {
+                                    color: #555;
+                                }
+                            }
+
+                        }
+                    }
+
+                    .dropdown:hover {
+                        .dropdown__content {
+                            display: flex;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.header-menu {
+    height: 4.5rem;
+    position: relative;
+    background-color: rgba(0, 0, 0, .3);
+
+    .mark-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, .15);
+        z-index: 1;
+    }
+
+    .title {
+        display: flex;
+        align-items: center;
+        max-width: $w-menu-mega;
+        width: 100%;
+        height: 3.7rem;
+        line-height: 3.7rem;
+        padding-left: 1rem;
+        margin-top: 0.8rem;
+        border-radius: .6rem .6rem 0 0;
+        font-size: 1.6rem;
+        font-weight: 600;
+        color: #444;
+        background-color: #fff;
+        transform: translateX(.1rem);
+        box-shadow: .1rem 0 .8rem .2rem rgba(0, 0, 0, .15);
+        z-index: 0;
+
+        @include maxWidth($XXL) {
+            width: $w-menu-mega-XXL;
+        }
+
+        svg {
+            margin-right: 1rem;
+        }
+    }
+
+    .hot-news {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        flex-wrap: nowrap;
+        max-width: calc(100% - 34rem);
+        width: 100%;
+        margin-left: 2rem;
+        z-index: 1;
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+        }
+        @include maxWidth($XXL) {
+            // max-width: $w-menu-slider-XXL + $w-banner-right + 0.8rem;
+            margin-left: 1rem;
+        }
+
+        @include maxWidth($XL) {
+            // max-width: 76.5rem;
+        }
+
+        @include maxWidth($LG) {
+            max-width: calc(100% - 29.5rem - 1rem);
+        }
+
+        &__box {
+            position: absolute;
+            display: flex;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            transition: all 1s ease-out;
+            
+            img {
+                display: block;
+                width: 1.9rem;
+                height: 1.9rem;
+                margin-right: 1rem;
+            }
+    
+            p {
+                color: white;
+                font-weight: 500;
+                font-size: 1.2rem;
+                transform: translateY(.3rem);
+            }
+        }
+        // &__box:first-child {
+        //     top: 1.6rem;
+        //     z-index: 2;
+        // }
+
+        // &__box:not(:first-child) {
+        //     top: 5.6rem;
+        //     z-index: 5;
+        //     opacity: 0;
+        // }
+    }
+}
+
+.main-menu {
+    margin-top: -4.5rem;
+    padding: 4.5rem 0 5.5rem;
+    background: linear-gradient(60deg, #ff95cb, #ffdada, #ff8787);
+    @include maxWidth($LG) {
+        padding-top: 6.5rem;
+    }
+
+    @include maxWidth($XS) {
+        padding-top: 10.5rem;
+        padding-bottom: 5rem;
+    }
+    .mega {
+        min-width: $w-menu-mega;
+        margin: 0 2rem 2rem .1rem;
+        box-shadow: .1rem 0 .8rem .2rem rgba(0, 0, 0, .15);
+
+        @include maxWidth($XXL) {
+            min-width: $w-menu-mega-XXL;
+            margin-right: 1rem; 
+        }
+
+        @include maxWidth($LG) {
+            display: none;
+        }
+
+        &__list {
+            max-width: $w-menu-mega;
+            width: 100%;
+            padding: 1rem 0;
+            border-radius: 0 0 .6rem .6rem;
+            background-color: #fff;
+
+            @include maxWidth($XXL) {
+                padding: .5rem 0;
+            }
+
+            @include maxWidth($XL) {
+                padding: 0;
+            }
+
+            &-item {
+                display: flex;
+                align-items: center;
+                padding-left: 1rem;
+                height: 4rem;
+                line-height: 4rem;
+                font-size: 1.5rem;
+                font-weight: 500;
+                color: #444;
+
+                @include maxWidth($XXL) {
+                    font-size: 1.4rem;
+                }
+
+                @include maxWidth($LG) {
+                    height: 3.8rem;
+                }
+
+                
+            }
+
+            &-item::before {
+                content: '';
+                display: block;
+                background: url('../img/index/school.png');
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+                width: 1.8em;
+                height: 1.3rem;
+                margin-right: 0.5rem;
+            }
+
+            &-item:hover {
+                background-color: rgba(0, 0, 0, .07);
+                color: #1587CB;
+            }
+        }
+    }
+
+    .slider {
+        max-width: $w-menu-slider;
+        width: 100%;
+        margin-top: 2rem;
+        margin-right: 2rem;
+        margin-bottom: 2rem;
+        box-shadow: .1rem .1rem .8rem .2rem rgba(0, 0, 0, .15);
+        border-radius: .4rem;
+        
+
+        @include maxWidth($XXL) {
+            max-width: $w-menu-slider-XXL;
+            margin-right: 1rem;
+            margin-bottom: 1rem;
+            margin-top: 1rem;
+        }
+
+        @include maxWidth($XL) {
+            max-width: $w-menu-slider-XL;
+        }
+
+        @include maxWidth($LG) {
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+            margin-right: 0;
+            max-width: 100%;
+        }
+        @include maxWidth($XS) {
+            margin-bottom: 0;
+            border-radius: 1rem;
+        }
+
+        .swiper-container {
+            width: 100%;
+            height: $h-menu-mega;
+            border-radius: .6rem;
+
+            @include maxWidth($XL) {
+                height: $h-menu-mega-XL;
+            }
+
+            @include maxWidth($LG) {
+                height: $h-menu-mega-LG;
+            }
+            @include maxWidth($MD) {
+                height: $h-menu-mega-MD;
+            }
+
+            @include maxWidth($XS) {
+                height: $h-menu-mega-XS;
+                border-radius: 1rem;
+            }
+        }
+
+        .swiper-slide {
+            @include maxWidth($LG) {
+                width: 100% !important;
+            }
+        }
+        
+    }
+
+
+    .banner-right {
+        width: $w-banner-right;
+        height: $h-menu-mega;
+        margin-top: 2rem;
+        padding: 1.5rem;
+        border-radius: .4rem;
+        background-color: #fff;
+        box-shadow: .1rem .1rem .8rem .2rem rgba(0, 0, 0, .15);
+
+        @include maxWidth($XXL) {
+            width: $w-banner-right-XXL;
+            margin-top: 1rem;
+        }
+
+        @include maxWidth($XL) {
+            display: none;
+        }
+
+        a {
+            display: block;
+            height: 29rem;
+
+            img {
+                border-radius: .4rem;
+            }
+        }
+
+        button {
+            position: relative;
+            width: 21.3rem;
+            height: 5.5rem;
+            line-height: 5.5rem;
+            margin-top: 2.2rem;
+            border-radius: .6rem;
+            font-size: 1.6rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: #fff;
+            background-color: #0069AD;
+            overflow: hidden;
+
+            p {
+                position: relative;
+                z-index: 2;
+            }
+        }
+
+        button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -2.5rem;
+            display: block;
+            background: url('../img/index/logo-btn.svg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 17rem;
+            height: 14.5rem;
+            z-index: 1;
+        }
+    }
+}
+
+.static {
+    &__wrap {
+        background: url('../img/index/sbg.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        align-items: center;
+        height: 11rem;
+        width: 100%;
+        margin-top: -5.5rem;
+        border-radius: 0.6rem;
+        box-shadow: .5rem .5rem .5rem rgba(0 , 0, 0, .2);
+        @include maxWidth($MD) {
+            height: 7rem;
+            margin-top: -3.5rem;
+        }
+        &-box {
+            display: flex;
+            flex-wrap: nowrap;
+            &:nth-child(2) {
+                @include maxWidth($SM) {
+                    display: none;  
+                }
+            }
+            &:nth-child(3) {
+                @include maxWidth($MD) {
+                    display: none;
+                }
+                span {
+                    margin-bottom: 0;
+                }
+                p {
+                    margin-bottom: 0.5rem;
+                }
+            }
+            img {
+                max-width: 7rem;
+                max-height: 4.5rem;
+                width: 100%;
+                @include maxWidth($XS) {
+                    max-width: 5rem;
+                }
+            } 
+            .right {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                margin-left: 2rem;
+                @include maxWidth($MD) {
+                    margin-left: 0.5rem;
+                }
+                @include maxWidth($XS) {
+                    width: 13rem;
+                }
+                span {
+                    font-size: 2.2rem;
+                    font-weight: 600;
+                    color: #fff;
+                    margin-bottom: .5rem;
+                    @include maxWidth($MD) {
+                        font-size: 1.6rem;
+                    }
+                }
+                p {
+                    font-size: 1.9rem;
+                    font-weight: 500;
+                    color: #fff;
+                    @include maxWidth($MD) {
+                        font-size: 1.4rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.main-thpt {
+    margin-bottom: 1rem;
+    .breakcrumb-top {
+        position: relative;
+        margin: 5rem 0 2.5rem 1.5rem;
+        font-size: 2.4rem;
+        color: #888;
+        @include maxWidth($LG) {
+            margin: 2rem 0 1.5rem 1.5rem;
+        }
+        &::before {
+            position: absolute;
+            top: -.3rem;
+            left: -1.5rem;
+            content: '';
+            display: block;
+            height: 3.5rem;
+            width: 0.5rem;
+            background-color: #28B1FF;
+        }
+    }
+    &__top {
+        display: flex;
+        flex-wrap: nowrap;
+        position: relative;
+        width: 100%;
+        height: 37.7rem;
+        z-index: 3;
+        @include maxWidth($XXL) {
+            height: 33.5rem;
+        }
+        @include maxWidth($XL) {
+            height: 31rem;
+        }
+        @include maxWidth($LG) {
+            height: 100%;
+        }
+        .thumb {
+            max-width: calc(40% - .6rem);
+            width: 100%;
+            height: $h-slide;
+            margin-right: 1rem;
+            border-radius: .6rem;
+            box-shadow: .3rem .3rem .5rem rgba(0 , 0, 0, .15);
+            overflow: hidden;
+            @include maxWidth($XXL) {
+                max-width: 45.8rem;
+                height: $h-slide-XXL;
+            }
+            @include maxWidth($XL) {
+                max-width: 41.8rem;
+                height: $h-slide-XL;
+            }
+            @include maxWidth($LG) {
+                display: none;
+            }
+            
+        }
+    
+        .swiper {
+            position: relative;
+            max-width: calc(100% - 52.2rem - 1rem);
+            width: 100%;
+
+            @include maxWidth($XXL) {
+                max-width: calc(100% - 45.8rem - 1rem);
+            }
+            @include maxWidth($XL) {
+                max-width: calc(100% - 41.8rem - 1rem);
+            }
+            @include maxWidth($LG) {
+                max-width: 100%;
+            }
+            &-container {
+                padding: 1rem .5rem 1rem .5rem;
+                margin: -1rem -.5rem -1rem -.5rem;
+            }
+
+            &-button-next {
+                top: 12.5rem;
+                right: -5rem;
+                background: url('../img/index/icon-nextleft.png');
+                background-size: cover;
+                background-repeat: no-repeat;
+                width: 5rem;
+                height: 9rem;
+                transform: rotate(180deg);
+                outline: none;
+                @include maxWidth($LG) {
+                    display: none;
+                }
+                &::after {
+                    display: none;
+                }
+            }
+            &-button-prev {
+                top: 12.5rem;
+                left: -4rem;
+                background: url('../img/index/icon-nextleft.png');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                width: 5rem;
+                height: 9rem;
+                outline: none;
+                @include maxWidth($LG) {
+                    display: none;
+                }
+                &::after {
+                    display: none;
+                }
+            }
+
+            &__course {
+                position: relative;
+                z-index: 3;
+                width: 100%;
+                border-radius: .4rem;
+                background-color: white;
+                box-shadow: 0 .2rem .4rem rgba(0 , 0, 0, .3);
+                overflow: hidden;
+                transition: all .3s ease;
+                &:hover .button {
+                    display: block;
+                }
+                &-img {
+                    position: relative;
+                    &::before {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        content: 'NEW';
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 3.5rem;
+                        height: 1.8rem;
+                        border-radius: 0 0 .8rem 0;
+                        color: #fff;
+                        background-color: #28B1FF;
+                    }
+                    img {
+                        display: block;
+                        width: 100%;
+                        height: 15.5rem;
+                        @include maxWidth($XXL) {
+                            height: 13.5rem;
+                        }
+                        @include maxWidth($LG) {
+                            height: 22.5rem;
+                        }
+                        @include maxWidth($XS) {
+                            height: 13.5rem;
+                        }
+                    }
+                }
+                &-detail {
+                    padding: 1.5rem;
+                    @include maxWidth($XXL) {
+                        padding: 1rem;
+                    }
+                    .title {
+                        height: 4.2rem;
+                        margin-bottom: 1.5rem;
+                        font-size: 1.8rem;
+                        color: #444444;
+                        @include maxWidth($XXL) {
+                            height: 4rem;
+                            margin-bottom: 1rem;
+                            font-size: 1.7rem;
+                        }
+                        @include maxWidth($XL) {
+                            height: 3.4rem;
+                            font-size: 1.5rem;
+                            margin-bottom: .4rem;
+                        }
+                    }
+                    .teacher {
+                        height: 3rem;
+                        margin-bottom: .7rem;
+                        font-size: 1.3rem;
+                        color: #444;
+                        @include maxWidth($XL) {
+                            height: 2.8rem;
+                            font-size: 1.2rem;
+                            margin-bottom: .5rem;
+                        }
+                        span {
+                            color: #28B1FF;
+                        }
+                    }
+                    .list {
+                        margin-bottom: 1.5rem;
+                        @include maxWidth($XXL) {
+                            margin-bottom: 1.1rem;
+                        }
+                        @include maxWidth($XL) {
+                            margin-bottom: .6rem;
+                        }
+                        &__item {
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: start;
+                            margin-bottom: .2rem;
+                            font-size: 1.3rem;
+                            color: #898989;
+                            @include maxWidth($XL) {
+                                font-size: 1.2rem;
+                                margin-bottom: 0;
+                            }
+                            &:nth-child(1) svg {
+                                color: #f05252;
+                            }
+                            &:nth-child(2) svg {
+                                color: #28B1FF;
+                            }
+                            svg {
+                                margin-right: .5rem;
+                            }
+                            span {
+                                margin-right: .3rem;
+                                color: #28B1FF;                            
+                            }
+                        }
+                    }
+                    .button {
+                        display: none;
+                        max-width: 22.4rem;
+                        width: 100%;
+                        height: 3.5rem;
+                        border-radius: .6rem;
+                        line-height: 3.5rem;
+                        font-weight: 500;
+                        font-size: 1.7rem;
+                        text-align: center;
+                        color: white;
+                        background: #28B1FF;
+                        @include maxWidth($XXL) {
+                            font-size: 1.6rem;
+                        }
+                        @include maxWidth($XL) {
+                            height: 3rem;
+                            line-height: 3rem;
+                            border-radius: 0.4rem;
+                            font-size: 1.5rem;
+                        }
+                        @include maxWidth($LG) {
+                            display: none !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .breakcrumb-bottom {
+        display: none;
+        font-size: 2.4rem;
+        color: #888;
+        @include maxWidth($LG) {
+            margin: 2rem 0 1.5rem;
+            display: block;
+        }
+    }  
+    &__bottom {
+        position: relative;
+        width: 100%;
+        height: 37.7rem;
+        margin-top: -4rem;
+        z-index: 2;
+        @include maxWidth($XXL) {
+            height: 33.5rem;
+        }
+        @include maxWidth($XL) {
+            height: 31rem;
+        }
+        @include maxWidth($LG) {
+            height: 100%;
+            margin-top: 0;
+        } 
+        .swiper {
+            position: relative;
+            width: 100%;
+
+            &-container {
+                padding: 1rem .5rem 1rem .5rem;
+                margin: -1rem -.5rem -1rem -.5rem;
+            }
+
+            &-button-next {
+                top: 12.5rem;
+                right: -5rem;
+                background: url('../img/index/icon-nextleft.png');
+                background-size: cover;
+                background-repeat: no-repeat;
+                width: 5rem;
+                height: 9rem;
+                transform: rotate(180deg);
+                outline: none;
+                @include maxWidth($LG) {
+                    display: none;
+                }
+                &::after {
+                    display: none;
+                }
+            }
+
+            &-button-prev {
+                top: 12.5rem;
+                left: -5rem;
+                background: url('../img/index/icon-nextleft.png');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                width: 5rem;
+                height: 9rem;
+                outline: none;
+                @include maxWidth($LG) {
+                    display: none;
+                }
+                &::after {
+                    display: none;
+                }
+            }
+    
+            &__course {
+                position: relative;
+                z-index: 3;
+                width: 100%;
+                border-radius: .4rem;
+                background-color: white;
+                box-shadow: 0 .2rem .4rem rgba(0 , 0, 0, .3);
+                overflow: hidden;
+                &:hover .button {
+                    display: block;
+                    @include maxWidth($LG) {
+                        display: none;
+                    }
+                }
+                &-img {
+                    position: relative;
+                    &::before {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        content: 'NEW';
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 3.5rem;
+                        height: 1.8rem;
+                        border-radius: 0 0 .8rem 0;
+                        color: #fff;
+                        background-color: #FD2626;
+                    }
+                    img {
+                        display: block;
+                        width: 100%;
+                        height: 15.5rem;
+                        @include maxWidth($XXL) {
+                            height: 13.5rem;
+                        }
+                        @include maxWidth($LG) {
+                            height: 22.5rem;
+                        }
+                        @include maxWidth($XS) {
+                            height: 13.5rem;
+                        }
+                    }
+                }
+                &-detail {
+                    padding: 1.5rem;
+                    @include maxWidth($XXL) {
+                        padding: 1rem;
+                    }
+                    .title {
+                        height: 4.2rem;
+                        margin-bottom: 1.5rem;
+                        font-size: 1.8rem;
+                        color: #444444;
+                        @include maxWidth($XXL) {
+                            height: 4rem;
+                            margin-bottom: 1rem;
+                            font-size: 1.7rem;
+                        }
+                        @include maxWidth($XL) {
+                            height: 3.4rem;
+                            font-size: 1.5rem;
+                            margin-bottom: .4rem;
+                        }
+                    }
+                    .teacher {
+                        height: 3rem;
+                        margin-bottom: .7rem;
+                        font-size: 1.3rem;
+                        color: #444;
+                        @include maxWidth($XL) {
+                            height: 2.8rem;
+                            font-size: 1.2rem;
+                            margin-bottom: .5rem;
+                        }
+                        span {
+                            color: #28B1FF;
+                        }
+                    }
+                    .list {
+                        margin-bottom: 1.5rem;
+                        @include maxWidth($XXL) {
+                            margin-bottom: 1.1rem;
+                        }
+                        @include maxWidth($XL) {
+                            margin-bottom: .6rem;
+                        }
+                        &__item {
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: start;
+                            margin-bottom: .2rem;
+                            font-size: 1.3rem;
+                            color: #898989;
+                            @include maxWidth($XL) {
+                                font-size: 1.2rem;
+                                margin-bottom: 0;
+                            }
+                            &:nth-child(1) svg {
+                                color: #f05252;
+                            }
+                            &:nth-child(2) svg {
+                                color: #28B1FF;
+                            }
+                            svg {
+                                margin-right: .5rem;
+                            }
+                            span {
+                                margin-right: .3rem;
+                                color: #28B1FF;                            
+                            }
+                        }
+                    }
+                    .button {
+                        display: none;
+                        max-width: 22.4rem;
+                        width: 100%;
+                        height: 3.5rem;
+                        border-radius: .6rem;
+                        line-height: 3.5rem;
+                        font-weight: 500;
+                        font-size: 1.7rem;
+                        text-align: center;
+                        color: white;
+                        background: #28B1FF;
+                        @include maxWidth($XXL) {
+                            font-size: 1.6rem;
+                        }
+                        @include maxWidth($XL) {
+                            height: 3rem;
+                            line-height: 3rem;
+                            border-radius: 0.4rem;
+                            font-size: 1.5rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.main-thcs {
+    margin-bottom: 1rem;
+    .breakcrumb-top {
+        position: relative;
+        margin: 0rem 0 2.5rem 1.5rem;
+        font-size: 2.4rem;
+        color: #888;
+        @include maxWidth($LG) {
+            margin: 2rem 0 1.5rem 1.5rem;
+        }
+        &::before {
+            position: absolute;
+            top: -.3rem;
+            left: -1.5rem;
+            content: '';
+            display: block;
+            height: 3.5rem;
+            width: 0.5rem;
+            background-color: #28B1FF;
+        }
+    }
+    &__top {
+        display: flex;
+        flex-wrap: nowrap;
+        position: relative;
+        width: 100%;
+        height: 37.7rem;
+        z-index: 3;
+        @include maxWidth($XXL) {
+            height: 33.5rem;
+        }
+        @include maxWidth($XL) {
+            height: 31rem;
+        }
+        @include maxWidth($LG) {
+            height: 100%;
+        }
+        .thumb {
+            max-width: calc(40% - .6rem);
+            width: 100%;
+            height: $h-slide;
+            margin-right: 1rem;
+            border-radius: .6rem;
+            box-shadow: .3rem .3rem .5rem rgba(0 , 0, 0, .15);
+            overflow: hidden;
+            @include maxWidth($XXL) {
+                max-width: 45.8rem;
+                height: $h-slide-XXL;
+            }
+            @include maxWidth($XL) {
+                max-width: 41.8rem;
+                height: $h-slide-XL;
+            }
+            @include maxWidth($LG) {
+                display: none;
+            }
+            
+        }
+    
+        .swiper {
+            position: relative;
+            max-width: calc(100% - 52.2rem - 1rem);
+            width: 100%;
+
+            @include maxWidth($XXL) {
+                max-width: calc(100% - 45.8rem - 1rem);
+            }
+            @include maxWidth($XL) {
+                max-width: calc(100% - 41.8rem - 1rem);
+            }
+            @include maxWidth($LG) {
+                max-width: 100%;
+            }
+            &-container {
+                padding: 1rem .5rem 1rem .5rem;
+                margin: -1rem -.5rem -1rem -.5rem;
+            }
+
+            &-button-next {
+                top: 12.5rem;
+                right: -5rem;
+                background: url('../img/index/icon-nextleft.png');
+                background-size: cover;
+                background-repeat: no-repeat;
+                width: 5rem;
+                height: 9rem;
+                transform: rotate(180deg);
+                outline: none;
+                @include maxWidth($LG) {
+                    display: none;
+                }
+                &::after {
+                    display: none;
+                }
+            }
+            &-button-prev {
+                top: 12.5rem;
+                left: -4rem;
+                background: url('../img/index/icon-nextleft.png');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                width: 5rem;
+                height: 9rem;
+                outline: none;
+                @include maxWidth($LG) {
+                    display: none;
+                }
+                &::after {
+                    display: none;
+                }
+            }
+
+            &__course {
+                position: relative;
+                z-index: 3;
+                width: 100%;
+                border-radius: .4rem;
+                background-color: white;
+                box-shadow: 0 .2rem .4rem rgba(0 , 0, 0, .3);
+                overflow: hidden;
+                &:hover .button {
+                    display: block;
+                }
+                &-img {
+                    position: relative;
+                    &::before {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        content: 'NEW';
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 3.5rem;
+                        height: 1.8rem;
+                        border-radius: 0 0 .8rem 0;
+                        color: #fff;
+                        background-color: #28B1FF;
+                    }
+                    img {
+                        display: block;
+                        width: 100%;
+                        height: 15.5rem;
+                        @include maxWidth($XXL) {
+                            height: 13.5rem;
+                        }
+                        @include maxWidth($LG) {
+                            height: 22.5rem;
+                        }
+                        @include maxWidth($XS) {
+                            height: 13.5rem;
+                        }
+                    }
+                }
+                &-detail {
+                    padding: 1.5rem;
+                    @include maxWidth($XXL) {
+                        padding: 1rem;
+                    }
+                    .title {
+                        height: 4.2rem;
+                        margin-bottom: 1.5rem;
+                        font-size: 1.8rem;
+                        color: #444444;
+                        @include maxWidth($XXL) {
+                            height: 4rem;
+                            margin-bottom: 1rem;
+                            font-size: 1.7rem;
+                        }
+                        @include maxWidth($XL) {
+                            height: 3.4rem;
+                            font-size: 1.5rem;
+                            margin-bottom: .4rem;
+                        }
+                    }
+                    .teacher {
+                        height: 3rem;
+                        margin-bottom: .7rem;
+                        font-size: 1.3rem;
+                        color: #444;
+                        @include maxWidth($XL) {
+                            height: 2.8rem;
+                            font-size: 1.2rem;
+                            margin-bottom: .5rem;
+                        }
+                        span {
+                            color: #28B1FF;
+                        }
+                    }
+                    .list {
+                        margin-bottom: 1.5rem;
+                        @include maxWidth($XXL) {
+                            margin-bottom: 1.1rem;
+                        }
+                        @include maxWidth($XL) {
+                            margin-bottom: .6rem;
+                        }
+                        &__item {
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: start;
+                            margin-bottom: .2rem;
+                            font-size: 1.3rem;
+                            color: #898989;
+                            @include maxWidth($XL) {
+                                font-size: 1.2rem;
+                                margin-bottom: 0;
+                            }
+                            &:nth-child(1) svg {
+                                color: #f05252;
+                            }
+                            &:nth-child(2) svg {
+                                color: #28B1FF;
+                            }
+                            svg {
+                                margin-right: .5rem;
+                            }
+                            span {
+                                margin-right: .3rem;
+                                color: #28B1FF;                            
+                            }
+                        }
+                    }
+                    .button {
+                        display: none;
+                        max-width: 22.4rem;
+                        width: 100%;
+                        height: 3.5rem;
+                        border-radius: .6rem;
+                        line-height: 3.5rem;
+                        font-weight: 500;
+                        font-size: 1.7rem;
+                        text-align: center;
+                        color: white;
+                        background: #28B1FF;
+                        @include maxWidth($XXL) {
+                            font-size: 1.6rem;
+                        }
+                        @include maxWidth($XL) {
+                            height: 3rem;
+                            line-height: 3rem;
+                            border-radius: 0.4rem;
+                            font-size: 1.5rem;
+                        }
+                        @include maxWidth($LG) {
+                            display: none !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .breakcrumb-bottom {
+        display: none;
+        font-size: 2.4rem;
+        color: #888;
+        @include maxWidth($LG) {
+            margin: 2rem 0 1.5rem;
+            display: block;
+        }
+    }  
+    &__bottom {
+        position: relative;
+        width: 100%;
+        height: 37.7rem;
+        margin-top: -4rem;
+        z-index: 2;
+        @include maxWidth($XXL) {
+            height: 33.5rem;
+        }
+        @include maxWidth($XL) {
+            height: 31rem;
+        }
+        @include maxWidth($LG) {
+            height: 100%;
+            margin-top: 0;
+        } 
+        .swiper {
+            position: relative;
+            width: 100%;
+
+            &-container {
+                padding: 1rem .5rem 1rem .5rem;
+                margin: -1rem -.5rem -1rem -.5rem;
+            }
+
+            &-button-next {
+                top: 12.5rem;
+                right: -5rem;
+                background: url('../img/index/icon-nextleft.png');
+                background-size: cover;
+                background-repeat: no-repeat;
+                width: 5rem;
+                height: 9rem;
+                transform: rotate(180deg);
+                outline: none;
+                @include maxWidth($LG) {
+                    display: none;
+                }
+                &::after {
+                    display: none;
+                }
+            }
+
+            &-button-prev {
+                top: 12.5rem;
+                left: -5rem;
+                background: url('../img/index/icon-nextleft.png');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                width: 5rem;
+                height: 9rem;
+                outline: none;
+                @include maxWidth($LG) {
+                    display: none;
+                }
+                &::after {
+                    display: none;
+                }
+            }
+    
+            &__course {
+                position: relative;
+                z-index: 3;
+                width: 100%;
+                border-radius: .4rem;
+                background-color: white;
+                box-shadow: 0 .2rem .4rem rgba(0 , 0, 0, .3);
+                overflow: hidden;
+                &:hover .button {
+                    display: block;
+                    @include maxWidth($LG) {
+                        display: none;
+                    }
+                }
+                &-img {
+                    position: relative;
+                    &::before {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        content: 'NEW';
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 3.5rem;
+                        height: 1.8rem;
+                        border-radius: 0 0 .8rem 0;
+                        color: #fff;
+                        background-color: #FD2626;
+                    }
+                    img {
+                        display: block;
+                        width: 100%;
+                        height: 15.5rem;
+                        @include maxWidth($XXL) {
+                            height: 13.5rem;
+                        }
+                        @include maxWidth($LG) {
+                            height: 22.5rem;
+                        }
+                        @include maxWidth($XS) {
+                            height: 13.5rem;
+                        }
+                    }
+                }
+                &-detail {
+                    padding: 1.5rem;
+                    @include maxWidth($XXL) {
+                        padding: 1rem;
+                    }
+                    .title {
+                        height: 4.2rem;
+                        margin-bottom: 1.5rem;
+                        font-size: 1.8rem;
+                        color: #444444;
+                        @include maxWidth($XXL) {
+                            height: 4rem;
+                            margin-bottom: 1rem;
+                            font-size: 1.7rem;
+                        }
+                        @include maxWidth($XL) {
+                            height: 3.4rem;
+                            font-size: 1.5rem;
+                            margin-bottom: .4rem;
+                        }
+                    }
+                    .teacher {
+                        height: 3rem;
+                        margin-bottom: .7rem;
+                        font-size: 1.3rem;
+                        color: #444;
+                        @include maxWidth($XL) {
+                            height: 2.8rem;
+                            font-size: 1.2rem;
+                            margin-bottom: .5rem;
+                        }
+                        span {
+                            color: #28B1FF;
+                        }
+                    }
+                    .list {
+                        margin-bottom: 1.5rem;
+                        @include maxWidth($XXL) {
+                            margin-bottom: 1.1rem;
+                        }
+                        @include maxWidth($XL) {
+                            margin-bottom: .6rem;
+                        }
+                        &__item {
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: start;
+                            margin-bottom: .2rem;
+                            font-size: 1.3rem;
+                            color: #898989;
+                            @include maxWidth($XL) {
+                                font-size: 1.2rem;
+                                margin-bottom: 0;
+                            }
+                            &:nth-child(1) svg {
+                                color: #f05252;
+                            }
+                            &:nth-child(2) svg {
+                                color: #28B1FF;
+                            }
+                            svg {
+                                margin-right: .5rem;
+                            }
+                            span {
+                                margin-right: .3rem;
+                                color: #28B1FF;                            
+                            }
+                        }
+                    }
+                    .button {
+                        display: none;
+                        max-width: 22.4rem;
+                        width: 100%;
+                        height: 3.5rem;
+                        border-radius: .6rem;
+                        line-height: 3.5rem;
+                        font-weight: 500;
+                        font-size: 1.7rem;
+                        text-align: center;
+                        color: white;
+                        background: #28B1FF;
+                        @include maxWidth($XXL) {
+                            font-size: 1.6rem;
+                        }
+                        @include maxWidth($XL) {
+                            height: 3rem;
+                            line-height: 3rem;
+                            border-radius: 0.4rem;
+                            font-size: 1.5rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.main-th {
+    margin-bottom: 1rem;
+    .breakcrumb-top {
+        position: relative;
+        margin: 0rem 0 2.5rem 1.5rem;
+        font-size: 2.4rem;
+        color: #888;
+        @include maxWidth($LG) {
+            margin: 2rem 0 1.5rem 1.5rem;
+        }
+        &::before {
+            position: absolute;
+            top: -.3rem;
+            left: -1.5rem;
+            content: '';
+            display: block;
+            height: 3.5rem;
+            width: 0.5rem;
+            background-color: #28B1FF;
+        }
+    }
+    &__top {
+        display: flex;
+        flex-wrap: nowrap;
+        position: relative;
+        width: 100%;
+        height: 37.7rem;
+        z-index: 3;
+        @include maxWidth($XXL) {
+            height: 33.5rem;
+        }
+        @include maxWidth($XL) {
+            height: 31rem;
+        }
+        @include maxWidth($LG) {
+            height: 100%;
+        }
+        .thumb {
+            max-width: calc(40% - .6rem);
+            width: 100%;
+            height: $h-slide;
+            margin-right: 1rem;
+            border-radius: .6rem;
+            box-shadow: .3rem .3rem .5rem rgba(0 , 0, 0, .15);
+            overflow: hidden;
+            @include maxWidth($XXL) {
+                max-width: 45.8rem;
+                height: $h-slide-XXL;
+            }
+            @include maxWidth($XL) {
+                max-width: 41.8rem;
+                height: $h-slide-XL;
+            }
+            @include maxWidth($LG) {
+                display: none;
+            }
+            
+        }
+    
+        .swiper {
+            position: relative;
+            max-width: calc(100% - 52.2rem - 1rem);
+            width: 100%;
+
+            @include maxWidth($XXL) {
+                max-width: calc(100% - 45.8rem - 1rem);
+            }
+            @include maxWidth($XL) {
+                max-width: calc(100% - 41.8rem - 1rem);
+            }
+            @include maxWidth($LG) {
+                max-width: 100%;
+            }
+            &-container {
+                padding: 1rem .5rem 1rem .5rem;
+                margin: -1rem -.5rem -1rem -.5rem;
+            }
+
+            &-button-next {
+                top: 12.5rem;
+                right: -5rem;
+                background: url('../img/index/icon-nextleft.png');
+                background-size: cover;
+                background-repeat: no-repeat;
+                width: 5rem;
+                height: 9rem;
+                transform: rotate(180deg);
+                outline: none;
+                @include maxWidth($LG) {
+                    display: none;
+                }
+                &::after {
+                    display: none;
+                }
+            }
+            &-button-prev {
+                top: 12.5rem;
+                left: -4rem;
+                background: url('../img/index/icon-nextleft.png');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                width: 5rem;
+                height: 9rem;
+                outline: none;
+                @include maxWidth($LG) {
+                    display: none;
+                }
+                &::after {
+                    display: none;
+                }
+            }
+
+            &__course {
+                position: relative;
+                z-index: 3;
+                width: 100%;
+                border-radius: .4rem;
+                background-color: white;
+                box-shadow: 0 .2rem .4rem rgba(0 , 0, 0, .3);
+                overflow: hidden;
+                &:hover .button {
+                    display: block;
+                }
+                &-img {
+                    position: relative;
+                    &::before {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        content: 'NEW';
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 3.5rem;
+                        height: 1.8rem;
+                        border-radius: 0 0 .8rem 0;
+                        color: #fff;
+                        background-color: #28B1FF;
+                    }
+                    img {
+                        display: block;
+                        width: 100%;
+                        height: 15.5rem;
+                        @include maxWidth($XXL) {
+                            height: 13.5rem;
+                        }
+                        @include maxWidth($LG) {
+                            height: 22.5rem;
+                        }
+                        @include maxWidth($XS) {
+                            height: 13.5rem;
+                        }
+                    }
+                }
+                &-detail {
+                    padding: 1.5rem;
+                    @include maxWidth($XXL) {
+                        padding: 1rem;
+                    }
+                    .title {
+                        height: 4.2rem;
+                        margin-bottom: 1.5rem;
+                        font-size: 1.8rem;
+                        color: #444444;
+                        @include maxWidth($XXL) {
+                            height: 4rem;
+                            margin-bottom: 1rem;
+                            font-size: 1.7rem;
+                        }
+                        @include maxWidth($XL) {
+                            height: 3.4rem;
+                            font-size: 1.5rem;
+                            margin-bottom: .4rem;
+                        }
+                    }
+                    .teacher {
+                        height: 3rem;
+                        margin-bottom: .7rem;
+                        font-size: 1.3rem;
+                        color: #444;
+                        @include maxWidth($XL) {
+                            height: 2.8rem;
+                            font-size: 1.2rem;
+                            margin-bottom: .5rem;
+                        }
+                        span {
+                            color: #28B1FF;
+                        }
+                    }
+                    .list {
+                        margin-bottom: 1.5rem;
+                        @include maxWidth($XXL) {
+                            margin-bottom: 1.1rem;
+                        }
+                        @include maxWidth($XL) {
+                            margin-bottom: .6rem;
+                        }
+                        &__item {
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: start;
+                            margin-bottom: .2rem;
+                            font-size: 1.3rem;
+                            color: #898989;
+                            @include maxWidth($XL) {
+                                font-size: 1.2rem;
+                                margin-bottom: 0;
+                            }
+                            &:nth-child(1) svg {
+                                color: #f05252;
+                            }
+                            &:nth-child(2) svg {
+                                color: #28B1FF;
+                            }
+                            svg {
+                                margin-right: .5rem;
+                            }
+                            span {
+                                margin-right: .3rem;
+                                color: #28B1FF;                            
+                            }
+                        }
+                    }
+                    .button {
+                        display: none;
+                        max-width: 22.4rem;
+                        width: 100%;
+                        height: 3.5rem;
+                        border-radius: .6rem;
+                        line-height: 3.5rem;
+                        font-weight: 500;
+                        font-size: 1.7rem;
+                        text-align: center;
+                        color: white;
+                        background: #28B1FF;
+                        @include maxWidth($XXL) {
+                            font-size: 1.6rem;
+                        }
+                        @include maxWidth($XL) {
+                            height: 3rem;
+                            line-height: 3rem;
+                            border-radius: 0.4rem;
+                            font-size: 1.5rem;
+                        }
+                        @include maxWidth($LG) {
+                            display: none !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .breakcrumb-bottom {
+        display: none;
+        font-size: 2.4rem;
+        color: #888;
+        @include maxWidth($LG) {
+            margin: 2rem 0 1.5rem;
+            display: block;
+        }
+    }  
+    &__bottom {
+        position: relative;
+        width: 100%;
+        height: 37.7rem;
+        margin-top: -4rem;
+        z-index: 2;
+        @include maxWidth($XXL) {
+            height: 33.5rem;
+        }
+        @include maxWidth($XL) {
+            height: 31rem;
+        }
+        @include maxWidth($LG) {
+            height: 100%;
+            margin-top: 0;
+        } 
+        .swiper {
+            position: relative;
+            width: 100%;
+
+            &-container {
+                padding: 1rem .5rem 1rem .5rem;
+                margin: -1rem -.5rem -1rem -.5rem;
+            }
+
+            &-button-next {
+                top: 12.5rem;
+                right: -5rem;
+                background: url('../img/index/icon-nextleft.png');
+                background-size: cover;
+                background-repeat: no-repeat;
+                width: 5rem;
+                height: 9rem;
+                transform: rotate(180deg);
+                outline: none;
+                @include maxWidth($LG) {
+                    display: none;
+                }
+                &::after {
+                    display: none;
+                }
+            }
+
+            &-button-prev {
+                top: 12.5rem;
+                left: -5rem;
+                background: url('../img/index/icon-nextleft.png');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                width: 5rem;
+                height: 9rem;
+                outline: none;
+                @include maxWidth($LG) {
+                    display: none;
+                }
+                &::after {
+                    display: none;
+                }
+            }
+    
+            &__course {
+                position: relative;
+                z-index: 3;
+                width: 100%;
+                border-radius: .4rem;
+                background-color: white;
+                box-shadow: 0 .2rem .4rem rgba(0 , 0, 0, .3);
+                overflow: hidden;
+                &:hover .button {
+                    display: block;
+                    @include maxWidth($LG) {
+                        display: none;
+                    }
+                }
+                &-img {
+                    position: relative;
+                    &::before {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        content: 'NEW';
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 3.5rem;
+                        height: 1.8rem;
+                        border-radius: 0 0 .8rem 0;
+                        color: #fff;
+                        background-color: #FD2626;
+                    }
+                    img {
+                        display: block;
+                        width: 100%;
+                        height: 15.5rem;
+                        @include maxWidth($XXL) {
+                            height: 13.5rem;
+                        }
+                        @include maxWidth($LG) {
+                            height: 22.5rem;
+                        }
+                        @include maxWidth($XS) {
+                            height: 13.5rem;
+                        }
+                    }
+                }
+                &-detail {
+                    padding: 1.5rem;
+                    @include maxWidth($XXL) {
+                        padding: 1rem;
+                    }
+                    .title {
+                        height: 4.2rem;
+                        margin-bottom: 1.5rem;
+                        font-size: 1.8rem;
+                        color: #444444;
+                        @include maxWidth($XXL) {
+                            height: 4rem;
+                            margin-bottom: 1rem;
+                            font-size: 1.7rem;
+                        }
+                        @include maxWidth($XL) {
+                            height: 3.4rem;
+                            font-size: 1.5rem;
+                            margin-bottom: .4rem;
+                        }
+                    }
+                    .teacher {
+                        height: 3rem;
+                        margin-bottom: .7rem;
+                        font-size: 1.3rem;
+                        color: #444;
+                        @include maxWidth($XL) {
+                            height: 2.8rem;
+                            font-size: 1.2rem;
+                            margin-bottom: .5rem;
+                        }
+                        span {
+                            color: #28B1FF;
+                        }
+                    }
+                    .list {
+                        margin-bottom: 1.5rem;
+                        @include maxWidth($XXL) {
+                            margin-bottom: 1.1rem;
+                        }
+                        @include maxWidth($XL) {
+                            margin-bottom: .6rem;
+                        }
+                        &__item {
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: start;
+                            margin-bottom: .2rem;
+                            font-size: 1.3rem;
+                            color: #898989;
+                            @include maxWidth($XL) {
+                                font-size: 1.2rem;
+                                margin-bottom: 0;
+                            }
+                            &:nth-child(1) svg {
+                                color: #f05252;
+                            }
+                            &:nth-child(2) svg {
+                                color: #28B1FF;
+                            }
+                            svg {
+                                margin-right: .5rem;
+                            }
+                            span {
+                                margin-right: .3rem;
+                                color: #28B1FF;                            
+                            }
+                        }
+                    }
+                    .button {
+                        display: none;
+                        max-width: 22.4rem;
+                        width: 100%;
+                        height: 3.5rem;
+                        border-radius: .6rem;
+                        line-height: 3.5rem;
+                        font-weight: 500;
+                        font-size: 1.7rem;
+                        text-align: center;
+                        color: white;
+                        background: #28B1FF;
+                        @include maxWidth($XXL) {
+                            font-size: 1.6rem;
+                        }
+                        @include maxWidth($XL) {
+                            height: 3rem;
+                            line-height: 3rem;
+                            border-radius: 0.4rem;
+                            font-size: 1.5rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.about {
+    margin-bottom: 6rem;
+    &__left {
+        @include maxWidth($LG) {
+            width: 100%;
+        }
+        &-title {
+            margin-bottom: 2.5rem;
+            font-size: 2.4rem;
+            color: #444;
+            @include maxWidth($LG) {
+                margin-top: 2.5rem;
+            }
+        }
+        .swiper {
+            background: url('../img/index/triangle.png');
+            background-repeat: no-repeat;
+            max-width: 52.8rem;
+            width: 100%;
+            height: 34rem;
+            border-radius: 0.4rem;
+            box-shadow: 0 0 .5rem .2rem rgba(0, 0, 0, .3);
+            @include maxWidth($LG) {
+                max-width: 100%;
+                height: 19rem;
+            }
+            
+            .feedback {
+                padding: 3rem;
+                @include maxWidth($LG) {
+                    padding: 1.5rem;
+                }
+                
+                &__top {
+                    display: flex;
+                    flex-wrap: nowrap;
+                    margin-bottom: 5rem;
+                    @include maxWidth($LG) {
+                        margin-bottom: 0;
+                    }
+                    &-img {
+                        display: flex;
+                        flex-shrink: 0;
+                        justify-content: center;
+                        align-items: center;
+                        width: 10rem;
+                        height: 10rem;
+                        margin-right: 4rem;
+                        border: 1px solid #888;
+                        border-radius: 50%;
+                        overflow: hidden;
+                        @include maxWidth($LG) {
+                            width: 8rem;
+                            height: 8rem;
+                        }
+                    }
+                    &-info {
+                        @include maxWidth($LG) {
+                            margin: 0 auto;
+                        }
+                        h4 {
+                            margin-bottom: 1.5rem;
+                            font-size: 1.6rem;
+                            color: #1279BB;
+                            @include maxWidth($LG) {
+                                margin-bottom: .5rem;
+                            }
+                        }
+                        p {
+                            margin-bottom: 0.2rem;
+                            font-size: 1.5rem;
+                            color: #444;
+                            @include maxWidth($LG) {
+                                color: #888;
+                            }
+                        }
+                    }
+                }
+                &__content {
+                    position: relative;
+                    margin-left: 3rem;
+                    margin-bottom: 4rem;
+                    font-size: 1.6rem;
+                    color: #888;
+                    -webkit-line-clamp: 2;
+                    text-overflow: ellipsis;
+                    @include maxWidth($LG) {
+                        padding-left: 4rem;
+                        margin: 1rem 0 1.5rem;
+                    }
+                    &::before {
+                        position: absolute;
+                        top: -.5rem;
+                        left: -3.5rem;
+                        content: '';
+                        display: block;
+                        background: url('../img/index/comma.png');
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        background-position: center;
+                        width: 3rem;
+                        height: 2.4rem;
+                        @include maxWidth($LG) {
+                            left: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__right {
+        max-width: calc(100% - 52.8rem - 3rem);
+        width: 100%;
+        margin-left: 3rem;
+        @include maxWidth($LG) {
+            max-width: 100%;
+            margin-left: 0;
+        }
+        &-title {
+            margin-bottom: 2.5rem;
+            font-size: 2.4rem;
+            color: #444;
+            @include maxWidth($LG) {
+                margin-top: 2.5rem;
+            }
+        }
+        .info {
+            height: 34rem;
+            border-radius: 0.4rem;
+            box-shadow: 0 0 .5rem .2rem rgba(0, 0, 0, .3);
+            &__top {
+                display: flex;
+                flex-wrap: nowrap;
+                &-img {
+                    max-width: 38rem;
+                    width: 100%;
+                    img {
+                        width: 100%;
+                        max-height: 25rem;
+                        height: 100%;
+                        display: block;
+                    }
+                }
+                &-list {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                    margin-left: 3.5rem;
+                    padding-right: 1.5rem;
+                    .item {
+                        p {
+                            position: relative;
+                            margin-top: 4rem;
+                            font-size: 1.4rem;
+                            color: #444;
+                            text-overflow: ellipsis;
+                            -webkit-line-clamp: 1;
+                            display: -webkit-box;
+                            -webkit-box-orient: vertical;
+                            &::before {
+                                position: absolute;
+                                top: .4rem;
+                                left: -1.5rem;
+                                display: block;
+                                content: '';
+                                width: 0.5rem;
+                                height: 0.5rem;
+                                border-radius: 50%;
+                                background-color: #0F78BA;
+                            }
+                        }
+                    }
+                }
+            }
+            &__content {
+                margin-top: 2rem;
+                margin-left: 1.5rem;
+                color: #444;
+                font-size: 1.8rem;
+                max-width: 38rem;
+                width: 100%;
+            }
+        }
+    }
+}
+
+.footer {
+    &__top {
+        height: 30rem;
+        border-bottom: 1px solid rgb(0, 0, 0, .1);
+        box-shadow: 0 -.2rem .2rem rgba(0, 0, 0, .1);
+        @include maxWidth($LG) {
+            height: 100%;
+            box-shadow: unset;
+            border-bottom: 0;
+        }
+        &-box {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            @include maxWidth($LG) {
+                flex-direction: column;
+            }
+            :first-child {
+                .list__caption {
+                    display: none;
+                    @include maxWidth($LG) {
+                        display: block;
+                    }
+                }
+            }
+            .list {
+                &:last-child .list__caption {
+                    @include maxWidth($LG) {
+                        display: none;
+                    }
+                }
+                &__logo {
+                    position: relative;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background: url('../img/index/logo-bg-hocmai.png');
+                    width: 10rem;
+                    height: 10rem;
+                    transform: translateY(-2rem);
+                    z-index: 2;
+                    @include maxWidth($LG) {
+                        display: none;
+                    }
+                    &::before {
+                        position: absolute;
+                        content: '';
+                        display: block;
+                        top: 0;
+                        right: -1.2rem;
+                        border-bottom: 2rem solid #0C4370;
+                        border-right: 1.2rem solid transparent;
+                        z-index: 1;
+                    }
+                }
+                &__caption {
+                    margin-top: 7rem;
+                    margin-bottom: 1.5rem;
+                    font-size: 1.4rem;
+                    color: #444;
+                    font-weight: 600;
+                    @include maxWidth($LG) {
+                        height: 6rem;
+                        padding: 0 5.5rem;
+                        margin: 0 -5.5rem;          
+                        line-height: 6rem;
+                        font-size: 1.6rem;
+                        text-transform: uppercase;
+                        color: #666;
+                        border-bottom: 1px solid rgba(0, 0, 0, .3);
+                    }
+                    @include maxWidth($MD) {
+                        padding: 0 1.5rem;
+                        margin: 0 -1.5rem;
+                    }
+                    
+                }
+                &__wrap {
+                    display: block;
+                    height: 100%;
+                    transition: all .2s linear;
+                    overflow-y: hidden;
+                    @include maxWidth($LG) {
+                        height: 0;
+                    }
+                    &.active {
+                        margin-top: 3rem;
+                    }
+                    &-item {
+                        margin-bottom: 0.7rem;
+                        font-size: 1.4rem;
+                        color: #444;
+                        cursor: pointer;
+                        @include maxWidth($LG) {
+                            margin-left: 1.5rem;
+                        }
+                        &:hover {
+                            color: #0F78BA;
+                        }
+                    }
+                }
+                &__app-chplay {
+                    @include maxWidth($LG) {
+                        margin-top: 2rem;
+                    }
+                }
+                &__app-store {
+                    margin-top: 2rem;
+                }
+            }
+        }
+    }
+    &__bottom {
+        padding: 1.5rem 0;
+        border-bottom: 1px solid rgba(0, 0, 0, .1);
+        &-left {
+            p {
+                color: #888;
+                line-height: 1.2;
+                font-size: 1.1rem;
+            }
+        }
+        &-right {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            img {
+                max-width: 16rem;
+                width: 100%;
+            }
+            p {
+                color: #888;
+                line-height: 1.2;
+                font-size: 1.1rem;
+            }
+        }
+    }
+}

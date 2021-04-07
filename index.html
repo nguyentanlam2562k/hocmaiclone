@@ -1,0 +1,1908 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="./assets/css/plugin/jquery-ui.theme.min.css">
+    <!-- OWL CAROUSE -->
+    <link rel="stylesheet" href="./assets/css/plugin/owl.carousel.min.css">
+    <link rel="stylesheet" href="./assets/css/plugin/owl.theme.default.min.css">
+    <!-- SWIPER SLIDER -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <!-- MAIN -->
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <!-- INDEX -->
+    <link rel="stylesheet" href="./assets/css/index.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <!-- HEADER TOP -->
+        <div class="header__top">
+            <div class="container lg:container-fluid">
+                <div class="row no-gutters">
+                    <div class="header__top-wrap">
+                        <div class="left">
+                            <div class="left__logo"></div>
+                            <div class="left__box">
+                                <div class="left__box-wrap">
+                                    <input class="search" type="text" placeholder="Tìm kiếm khóa học">
+                                    <i class="fas fa-search icon"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="right lg:d-none">
+                            <div class="right__hotline">
+                                <span>
+                                    <i class="fas fa-phone"></i>
+                                </span>
+                                1900 6933
+                            </div>
+                            <div class="right__btn">
+                                <button class="right__btn-login">
+                                    Đăng Nhập
+                                </button>
+                                <button class="right__btn-register">
+                                    Đăng Ký
+                                </button>
+                            </div>
+                        </div>
+                        <div class="nav-show d-none lg:d-flex">
+                            <i class="fas fa-bars"></i>
+                        </div>
+                        <div class="nav-menu">
+                            <span class="btn-close">
+                                <i class="fas fa-times"></i>
+                            </span>
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        Giới Thiệu
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Giáo Viên
+                                    </a>
+                                </li>
+                                <li class="dropdown-mobile">
+                                    <a href="#">Phòng Thi</a>
+                                    <i class="fas fa-chevron-down"></i>
+                                    <ul class="dropdown-content">
+                                        <li>
+                                            <a href="#">
+                                                Tự luyện    
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Đánh giá năng lực
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Thư Viện
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Học Phí
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Hỗ Trợ
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="download-app">
+                                <div class="logo"></div>
+                                <div class="download-app__wrap pos-relative">
+                                    <p>
+                                        Tải ứng dụng HOCMAI để chủ động học tập mọi lúc mọi lúc mọi nơi
+                                    </p>
+                                    <button>
+                                        TẢI NGAY
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- HEADER BOTTOM -->
+        <div class="header__bottom sm:d-none">
+            <div class="container">
+                <div class="row no-gutters">
+                    <div class="header__bottom-wrap">
+                        <div class="nav">
+                            <ul class="nav__list">
+                                <li class="nav__list-item">
+                                    <a href="">
+                                        Giới Thiệu
+                                    </a>
+                                </li>
+                                <li class="nav__list-item">
+                                    <a href="">
+                                        Giáo Viên
+                                    </a>
+                                </li>
+                                <li class="nav__list-item dropdown">
+                                    <a href="">Phòng Thi</a>
+                                    <i class="fas fa-chevron-down"></i>
+                                    <ul class="dropdown__content">
+                                        <li>
+                                            <a href="">
+                                                Tự luyện
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                Đánh giá năng lực
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav__list-item">
+                                    <a href="">
+                                        Thư Viện
+                                    </a>
+                                </li>
+                                <li class="nav__list-item">
+                                    <a href="">
+                                        Học Phí
+                                    </a>
+                                </li>
+                                <li class="nav__list-item">
+                                    <a href="">
+                                        Hỗ Trợ
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- HEADER MENU -->
+    <div class="header-menu sm:d-none">
+        <div class="mark-bg"></div>
+        <div class="container h-100">
+            <div class="row no-gutters pos-relative h-100">
+                <div class="title">
+                    <i class="fas fa-bars"></i>
+                    <p>
+                        Các khóa học
+                    </p>
+                </div>
+                <div class="hot-news lg:d-none">
+                    <div class="swiper-container hot-news">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="hot-news__box" index="0">
+                                    <img src="./assets/img/index/fire.png" alt="fire">
+                                    <p>
+                                        Học Tốt 12 2022 - 2K4 học sớm 12, vững kiến thức, giảm 1/3 gánh nặng ôn thi Tốt nghiệp - Đại học
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="hot-news__box" index="0">
+                                    <img src="./assets/img/index/fire.png" alt="fire">
+                                    <p>
+                                        Hot 2k3! PEN-M 2021 chính thức lộ diện - Tăng tốc đỗ ĐH 9-10đ/môn trong 90 ngày >> Đặt chỗ ngay
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="hot-news__box" index="0">
+                                    <img src="./assets/img/index/fire.png" alt="fire">
+                                    <p>
+                                        Học Tốt 12 2022 - 2K4 học sớm 12, vững kiến thức, giảm 1/3 gánh nặng ôn thi Tốt nghiệp - Đại học
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- <div class="hot-news__box" index="1">
+                        <img src="./assets/img/index/fire.png" alt="fire">
+                        <p>
+                            Hot 2k3! PEN-M 2021 chính thức lộ diện - Tăng tốc đỗ ĐH 9-10đ/môn trong 90 ngày >> Đặt chỗ ngay
+                        </p>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- MAIN-MENU -->
+    <div class="main-menu">
+        <div class="container">
+            <div class="row no-gutters jc-center">
+                <div class="d-flex fxw-no-wrap pos-relative w-100">
+                    <div class="mega">
+                        <ul class="mega__list">
+                            <li class="mega__list-item">
+                                Đại học - Cao đẳng
+                            </li>
+                            <li class="mega__list-item">
+                                Khóa học bổ trợ
+                            </li>
+                            <li class="mega__list-item">
+                                Bồi dưỡng học sinh giỏi
+                            </li>
+                            <li class="mega__list-item">
+                                Luyện thi Đại học
+                            </li>
+                            <li class="mega__list-item">
+                                Lớp 10 - Lớp 11 - Lớp 12
+                            </li>
+                            <li class="mega__list-item">
+                                Luyện thi vào 10
+                            </li>
+                            <li class="mega__list-item">
+                                Lớp 6 - Lớp 7 - Lớp 8 - Lớp 9
+                            </li>
+                            <li class="mega__list-item">
+                                Luyện thi vào 6
+                            </li>
+                            <li class="mega__list-item">
+                                Lớp 1 - Lớp 2 - Lớp 3 - Lớp 4 - Lớp 5
+                            </li>
+                            <li class="mega__list-item">
+                                Tiền tiểu học
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="slider">
+                        <!-- Swiper JS -->
+                        <div class="swiper-container slider__main-menu">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <a href="">
+                                        <img src="./assets/img/index/banner-hoc-tot-12-715x400.png" class="w-100 h-100" alt="banner1">
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="">
+                                        <img src="./assets/img/index/banner-pen-m-715x400.png" class="w-100 h-100" alt="banner2">
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="">
+                                        <img src="./assets/img/index/banner-tang-toc-ve-dich-715x400.png" class="w-100 h-100" alt="banner3">
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="">
+                                        <img src="./assets/img/index/banner-chuong-trinh-hoc-tot-715x400.png" class="w-100 h-100" alt="banner4">
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="">
+                                        <img src="./assets/img/index/banner-trang-chu-sach-715x400.png" class="w-100 h-100" alt="banner5">
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="">
+                                        <img src="./assets/img/index/banner-hm10-715x400.png" class="w-100 h-100" alt="banner6">
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="">
+                                        <img src="./assets/img/index/banner-danh-gia-nang-luc-tieng-anh-715x400.jpg" class="w-100 h-100" alt="banner7">
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- Add Pagination  -->
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                    <div class="banner-right">
+                        <a href="">
+                            <img src="./assets/img/index/banner-web.png" alt="banner-web">
+                        </a>
+                        <button>
+                            <p>
+                                TẢI ỨNG DỤNG HỌC MÃI
+                            </p>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>   
+
+    <!-- STATIC -->
+    <div class="static">
+        <div class="container">
+            <div class="row no-gutters">
+                <div class="static__wrap">
+                    <div class="static__wrap-box">
+                        <img src="./assets/img/index/ptt.png" alt="box-year">
+                        <div class="right">
+                            <span>
+                                14 năm
+                            </span>
+                            <p>
+                                Giáo dục trực tuyến
+                            </p>
+                        </div>
+                    </div>
+                    <div class="static__wrap-box">
+                        <img src="./assets/img/index/member.png" alt="box-user">
+                        <div class="right">
+                            <span>
+                                4.817.656
+                            </span>
+                            <p>
+                                Thành viên
+                            </p>
+                        </div>
+                    </div>
+                    <div class="static__wrap-box">
+                        <img src="./assets/img/index/nt.png" alt="box-nt">
+                        <div class="right">
+                            <p>
+                                số 1 Việt Nam   
+                            </p>
+                            <span>
+                                Nền tảng học trực tuyến
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- MAIN THPT -->
+    <div class="main-thpt">
+        <div class="container">
+            <div class="row no-gutters">
+                <h2 class="breakcrumb-top">
+                    Trung học phổ thông
+                </h2>
+            </div>
+            <div class="row no-gutters">
+                <div class="main-thpt__top">
+                    <div class="thumb">
+                        <img src="./assets/img/index/main-thpt-banner.png" class="w-100 h-100" alt="banner">
+                    </div>
+                    <div class="swiper">
+                        <!-- Add Swiper JS -->
+                        <div class="swiper-container main-thpt__top-swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="swiper__course">
+                                        <div class="swiper__course-img">
+                                            <img src="./assets/img/index/on-luyen-toan-10-1560502405.jpg" alt="">
+                                        </div>
+                                        <div class="swiper__course-detail">
+                                            <h3 class="title">
+                                                Ôn luyện Toán 10
+                                            </h3>
+                                            <p class="teacher">
+                                                Giáo viên:
+                                                <span>
+                                                    Thầy Nguyễn Mạnh Cường
+                                                </span>
+                                            </p>
+                                            <ul class="list">
+                                                <li class="list__item">
+                                                    <i class="fas fa-play-circle"></i>
+                                                    <span>50</span>
+                                                    Bài giảng
+                                                </li>
+                                                <li class="list__item">
+                                                    <i class="fas fa-question-circle"></i>
+                                                    <span>1000</span>
+                                                    Câu hỏi
+                                                </li>
+                                            </ul>
+                                            <button class="button">
+                                                Tìm hiểu thêm
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="swiper__course">
+                                        <div class="swiper__course-img">
+                                            <img src="./assets/img/index/on-luyen-tieng-anh-10-1560507439.jpg" alt="">
+                                        </div>
+                                        <div class="swiper__course-detail">
+                                            <h3 class="title">
+                                                Ôn luyện Tiếng Anh 10
+                                            </h3>
+                                            <p class="teacher">
+                                                Giáo viên:
+                                                <span>
+                                                    Thầy Nguyễn Trung Nguyên
+                                                </span>
+                                            </p>
+                                            <ul class="list">
+                                                <li class="list__item">
+                                                    <i class="fas fa-play-circle"></i>
+                                                    <span>20</span>
+                                                    Bài giảng
+                                                </li>
+                                                <li class="list__item">
+                                                    <i class="fas fa-question-circle"></i>
+                                                    <span>600</span>
+                                                    Câu hỏi
+                                                </li>
+                                            </ul>
+                                            <button class="button">
+                                                Tìm hiểu thêm
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="swiper__course">
+                                        <div class="swiper__course-img">
+                                            <img src="./assets/img/index/vat-li-10-1560508102.jpg" alt="">
+                                        </div>
+                                        <div class="swiper__course-detail">
+                                            <h3 class="title">
+                                                Ôn luyện Vật lí 10
+                                            </h3>
+                                            <p class="teacher">
+                                                Giáo viên:
+                                                <span>
+                                                    Thầy Nguyễn Mạnh Cường
+                                                </span>
+                                            </p>
+                                            <ul class="list">
+                                                <li class="list__item">
+                                                    <i class="fas fa-play-circle"></i>
+                                                    <span>50</span>
+                                                    Bài giảng
+                                                </li>
+                                                <li class="list__item">
+                                                    <i class="fas fa-question-circle"></i>
+                                                    <span>1000</span>
+                                                    Câu hỏi
+                                                </li>
+                                            </ul>
+                                            <button class="button">
+                                                Tìm hiểu thêm
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="swiper__course">
+                                        <div class="swiper__course-img">
+                                            <img src="./assets/img/index/on-luyen-tieng-anh-10-1560507439.jpg" alt="">
+                                        </div>
+                                        <div class="swiper__course-detail">
+                                            <h3 class="title">
+                                                Ôn luyện Tiếng Anh 10 (hệ 7 năm)
+                                            </h3>
+                                            <p class="teacher">
+                                                Giáo viên:
+                                                <span>
+                                                    Cô Nguyễn Kiều Oanh
+                                                </span>
+                                            </p>
+                                            <ul class="list">
+                                                <li class="list__item">
+                                                    <i class="fas fa-play-circle"></i>
+                                                    <span>32</span>
+                                                    Bài giảng
+                                                </li>
+                                                <li class="list__item">
+                                                    <i class="fas fa-question-circle"></i>
+                                                    <span>9000</span>
+                                                    Câu hỏi
+                                                </li>
+                                            </ul>
+                                            <button class="button">
+                                                Tìm hiểu thêm
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="swiper__course">
+                                        <div class="swiper__course-img">
+                                            <img src="./assets/img/index/hoa-hoc-10.jpg" alt="">
+                                        </div>
+                                        <div class="swiper__course-detail">
+                                            <h3 class="title">
+                                                Ôn luyện Hóa học 10
+                                            </h3>
+                                            <p class="teacher">
+                                                Giáo viên:
+                                                <span>
+                                                    Thầy Nguyễn Khắc Ngọc
+                                                </span>
+                                            </p>
+                                            <ul class="list">
+                                                <li class="list__item">
+                                                    <i class="fas fa-play-circle"></i>
+                                                    <span>50</span>
+                                                    Bài giảng
+                                                </li>
+                                                <li class="list__item">
+                                                    <i class="fas fa-question-circle"></i>
+                                                    <span>800</span>
+                                                    Câu hỏi
+                                                </li>
+                                            </ul>
+                                            <button class="button">
+                                                Tìm hiểu thêm
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="swiper__course">
+                                        <div class="swiper__course-img">
+                                            <img src="./assets/img/index/toan-10-1560508028.jpg" alt="">
+                                        </div>
+                                        <div class="swiper__course-detail">
+                                            <h3 class="title">
+                                                Ôn luyện Toán 10
+                                            </h3>
+                                            <p class="teacher">
+                                                Giáo viên:
+                                                <span>
+                                                    Thầy Nguyễn Hoàng Phụ Lân
+                                                </span>
+                                            </p>
+                                            <ul class="list">
+                                                <li class="list__item">
+                                                    <i class="fas fa-play-circle"></i>
+                                                    <span>54</span>
+                                                    Bài giảng
+                                                </li>
+                                                <li class="list__item">
+                                                    <i class="fas fa-question-circle"></i>
+                                                    <span>1600</span>
+                                                    Câu hỏi
+                                                </li>
+                                            </ul>
+                                            <button class="button">
+                                                Tìm hiểu thêm
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Add Navigation Buttons -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row no-gutters">
+                <h2 class="breakcrumb-bottom">
+                    Các khóa học phổ biến
+                </h2>
+            </div>
+            <div class="row no-gutters">
+                <div class="main-thpt__bottom">
+                    <!-- Add swiper -->
+                    <div class="swiper">
+                        <div class="swiper-container main-thpt__bottom-swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="swiper__course">
+                                        <div class="swiper__course-img">
+                                            <img src="./assets/img/index/thpt-bottom-toanN2.png" alt="">
+                                        </div>
+                                        <div class="swiper__course-detail">
+                                            <h3 class="title">
+                                                PEN-C Toán
+                                            </h3>
+                                            <p class="teacher">
+                                                Giáo viên:
+                                                <span>
+                                                    Thầy Lê Trần Bá Phương
+                                                </span>
+                                            </p>
+                                            <ul class="list">
+                                                <li class="list__item">
+                                                    <i class="fas fa-play-circle"></i>
+                                                    <span>119</span>
+                                                    Bài giảng
+                                                </li>
+                                                <li class="list__item">
+                                                    <i class="fas fa-question-circle"></i>
+                                                    <span>2000</span>
+                                                    Câu hỏi
+                                                </li>
+                                            </ul>
+                                            <button class="button">
+                                                Tìm hiểu thêm
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="swiper__course">
+                                        <div class="swiper__course-img">
+                                            <img src="./assets/img/index/thpt-bottom-sinhhocN3.png" alt="">
+                                        </div>
+                                        <div class="swiper__course-detail">
+                                            <h3 class="title">
+                                                PEN-C Sinh học
+                                            </h3>
+                                            <p class="teacher">
+                                                Giáo viên:
+                                                <span>
+                                                    Thầy Nguyễn Thành Công
+                                                </span>
+                                            </p>
+                                            <ul class="list">
+                                                <li class="list__item">
+                                                    <i class="fas fa-play-circle"></i>
+                                                    <span>110</span>
+                                                    Bài giảng
+                                                </li>
+                                                <li class="list__item">
+                                                    <i class="fas fa-question-circle"></i>
+                                                    <span>3300</span>
+                                                    Câu hỏi
+                                                </li>
+                                            </ul>
+                                            <button class="button">
+                                                Tìm hiểu thêm
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="swiper__course">
+                                        <div class="swiper__course-img">
+                                            <img src="./assets/img/index/thpt-bottom-vatliN3.png" alt="">
+                                        </div>
+                                        <div class="swiper__course-detail">
+                                            <h3 class="title">
+                                                PEN-C Vật lí
+                                            </h3>
+                                            <p class="teacher">
+                                                Giáo viên:
+                                                <span>
+                                                    Thầy Đỗ Ngọc Hà
+                                                </span>
+                                            </p>
+                                            <ul class="list">
+                                                <li class="list__item">
+                                                    <i class="fas fa-play-circle"></i>
+                                                    <span>108</span>
+                                                    Bài giảng
+                                                </li>
+                                                <li class="list__item">
+                                                    <i class="fas fa-question-circle"></i>
+                                                    <span>4000</span>
+                                                    Câu hỏi
+                                                </li>
+                                            </ul>
+                                            <button class="button">
+                                                Tìm hiểu thêm
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="swiper__course">
+                                        <div class="swiper__course-img">
+                                            <img src="./assets/img/index/thpt-bottom-tienganhN3.png" alt="">
+                                        </div>
+                                        <div class="swiper__course-detail">
+                                            <h3 class="title">
+                                                PEN-C Tiếng anh
+                                            </h3>
+                                            <p class="teacher">
+                                                Giáo viên:
+                                                <span>
+                                                    Cô Hương Fiona
+                                                </span>
+                                            </p>
+                                            <ul class="list">
+                                                <li class="list__item">
+                                                    <i class="fas fa-play-circle"></i>
+                                                    <span>64</span>
+                                                    Bài giảng
+                                                </li>
+                                                <li class="list__item">
+                                                    <i class="fas fa-question-circle"></i>
+                                                    <span>1500</span>
+                                                    Câu hỏi
+                                                </li>
+                                            </ul>
+                                            <button class="button">
+                                                Tìm hiểu thêm
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="swiper__course">
+                                        <div class="swiper__course-img">
+                                            <img src="./assets/img/index/thpt-bottom-toan10.jpg" alt="">
+                                        </div>
+                                        <div class="swiper__course-detail">
+                                            <h3 class="title">
+                                                Ôn luyện Toán 10
+                                            </h3>
+                                            <p class="teacher">
+                                                Giáo viên:
+                                                <span>
+                                                    Thầy Nguyễn Mạnh Cường
+                                                </span>
+                                            </p>
+                                            <ul class="list">
+                                                <li class="list__item">
+                                                    <i class="fas fa-play-circle"></i>
+                                                    <span>50</span>
+                                                    Bài giảng
+                                                </li>
+                                                <li class="list__item">
+                                                    <i class="fas fa-question-circle"></i>
+                                                    <span>1000</span>
+                                                    Câu hỏi
+                                                </li>
+                                            </ul>
+                                            <button class="button">
+                                                Tìm hiểu thêm
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="swiper__course">
+                                        <div class="swiper__course-img">
+                                            <img src="./assets/img/index/thpt-bottom-vatli10.jpg" alt="">
+                                        </div>
+                                        <div class="swiper__course-detail">
+                                            <h3 class="title">
+                                                Ôn luyện Vật lí 10
+                                            </h3>
+                                            <p class="teacher">
+                                                Giáo viên:
+                                                <span>
+                                                    Thầy Đỗ Ngọc Hà
+                                                </span>
+                                            </p>
+                                            <ul class="list">
+                                                <li class="list__item">
+                                                    <i class="fas fa-play-circle"></i>
+                                                    <span>25</span>
+                                                    Bài giảng
+                                                </li>
+                                                <li class="list__item">
+                                                    <i class="fas fa-question-circle"></i>
+                                                    <span>1000</span>
+                                                    Câu hỏi
+                                                </li>
+                                            </ul>
+                                            <button class="button">
+                                                Tìm hiểu thêm
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="swiper__course">
+                                        <div class="swiper__course-img">
+                                            <img src="./assets/img/index/thpt-bottom-vatliN2.png" alt="">
+                                        </div>
+                                        <div class="swiper__course-detail">
+                                            <h3 class="title">
+                                                PEN-C Vật lí
+                                            </h3>
+                                            <p class="teacher">
+                                                Giáo viên:
+                                                <span>
+                                                    Thầy Nguyễn Nguyễn Thành Nam
+                                                </span>
+                                            </p>
+                                            <ul class="list">
+                                                <li class="list__item">
+                                                    <i class="fas fa-play-circle"></i>
+                                                    <span>122</span>
+                                                    Bài giảng
+                                                </li>
+                                                <li class="list__item">
+                                                    <i class="fas fa-question-circle"></i>
+                                                    <span>2000</span>
+                                                    Câu hỏi
+                                                </li>
+                                            </ul>
+                                            <button class="button">
+                                                Tìm hiểu thêm
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Add Navigation Buttons -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN THCS -->
+    <div class="main-thcs">
+        <div class="container">
+            <div class="row no-gutters">
+                <h2 class="breakcrumb-top">
+                    Trung học cơ sở
+                </h2>
+            </div>
+            <div class="row no-gutters">
+                <div class="main-thpt__top">
+                    <div class="thumb">
+                        <img src="./assets/img/index/main-thcs-banner.png" class="w-100 h-100" alt="banner">
+                    </div>
+                    <div class="swiper">
+                        <!-- Add Swiper JS -->
+                        <div class="swiper-container main-thpt__top-swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="swiper__course">
+                                        <div class="swiper__course-img">
+                                            <img src="./assets/img/index/main-thcs-slide-top-1.png" alt="">
+                                        </div>
+                                        <div class="swiper__course-detail">
+                                            <h3 class="title">
+                                                Ôn luyện Toán 10
+                                            </h3>
+                                            <p class="teacher">
+                                                Giáo viên:
+                                                <span>
+                                                    Thầy Nguyễn Mạnh Cường
+                                                </span>
+                                            </p>
+                                            <ul class="list">
+                                                <li class="list__item">
+                                                    <i class="fas fa-play-circle"></i>
+                                                    <span>50</span>
+                                                    Bài giảng
+                                                </li>
+                                                <li class="list__item">
+                                                    <i class="fas fa-question-circle"></i>
+                                                    <span>1000</span>
+                                                    Câu hỏi
+                                                </li>
+                                            </ul>
+                                            <button class="button">
+                                                Tìm hiểu thêm
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="swiper__course">
+                                        <div class="swiper__course-img">
+                                            <img src="./assets/img/index/main-thcs-slide-top-2.png" alt="">
+                                        </div>
+                                        <div class="swiper__course-detail">
+                                            <h3 class="title">
+                                                Ôn luyện Tiếng Anh 10
+                                            </h3>
+                                            <p class="teacher">
+                                                Giáo viên:
+                                                <span>
+                                                    Thầy Nguyễn Trung Nguyên
+                                                </span>
+                                            </p>
+                                            <ul class="list">
+                                                <li class="list__item">
+                                                    <i class="fas fa-play-circle"></i>
+                                                    <span>20</span>
+                                                    Bài giảng
+                                                </li>
+                                                <li class="list__item">
+                                                    <i class="fas fa-question-circle"></i>
+                                                    <span>600</span>
+                                                    Câu hỏi
+                                                </li>
+                                            </ul>
+                                            <button class="button">
+                                                Tìm hiểu thêm
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="swiper__course">
+                                        <div class="swiper__course-img">
+                                            <img src="./assets/img/index/main-thcs-slide-top-3.png" alt="">
+                                        </div>
+                                        <div class="swiper__course-detail">
+                                            <h3 class="title">
+                                                Ôn luyện Vật lí 10
+                                            </h3>
+                                            <p class="teacher">
+                                                Giáo viên:
+                                                <span>
+                                                    Thầy Nguyễn Mạnh Cường
+                                                </span>
+                                            </p>
+                                            <ul class="list">
+                                                <li class="list__item">
+                                                    <i class="fas fa-play-circle"></i>
+                                                    <span>50</span>
+                                                    Bài giảng
+                                                </li>
+                                                <li class="list__item">
+                                                    <i class="fas fa-question-circle"></i>
+                                                    <span>1000</span>
+                                                    Câu hỏi
+                                                </li>
+                                            </ul>
+                                            <button class="button">
+                                                Tìm hiểu thêm
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="swiper__course">
+                                        <div class="swiper__course-img">
+                                            <img src="./assets/img/index/main-thcs-slide-top-4.png" alt="">
+                                        </div>
+                                        <div class="swiper__course-detail">
+                                            <h3 class="title">
+                                                Ôn luyện Tiếng Anh 10 (hệ 7 năm)
+                                            </h3>
+                                            <p class="teacher">
+                                                Giáo viên:
+                                                <span>
+                                                    Cô Nguyễn Kiều Oanh
+                                                </span>
+                                            </p>
+                                            <ul class="list">
+                                                <li class="list__item">
+                                                    <i class="fas fa-play-circle"></i>
+                                                    <span>32</span>
+                                                    Bài giảng
+                                                </li>
+                                                <li class="list__item">
+                                                    <i class="fas fa-question-circle"></i>
+                                                    <span>9000</span>
+                                                    Câu hỏi
+                                                </li>
+                                            </ul>
+                                            <button class="button">
+                                                Tìm hiểu thêm
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Add Navigation Buttons -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row no-gutters">
+                <h2 class="breakcrumb-bottom">
+                    Các khóa học phổ biến
+                </h2>
+            </div>
+            <div class="row no-gutters">
+                <div class="main-thpt__bottom">
+                    <!-- Add swiper -->
+                    <div class="swiper">
+                        <div class="swiper-container main-thpt__bottom-swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="swiper__course">
+                                        <div class="swiper__course-img">
+                                            <img src="./assets/img/index/main-thcs-slide-bottom-1.png" alt="">
+                                        </div>
+                                        <div class="swiper__course-detail">
+                                            <h3 class="title">
+                                                PEN-C Toán
+                                            </h3>
+                                            <p class="teacher">
+                                                Giáo viên:
+                                                <span>
+                                                    Thầy Lê Trần Bá Phương
+                                                </span>
+                                            </p>
+                                            <ul class="list">
+                                                <li class="list__item">
+                                                    <i class="fas fa-play-circle"></i>
+                                                    <span>119</span>
+                                                    Bài giảng
+                                                </li>
+                                                <li class="list__item">
+                                                    <i class="fas fa-question-circle"></i>
+                                                    <span>2000</span>
+                                                    Câu hỏi
+                                                </li>
+                                            </ul>
+                                            <button class="button">
+                                                Tìm hiểu thêm
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="swiper__course">
+                                        <div class="swiper__course-img">
+                                            <img src="./assets/img/index//main-thcs-slide-bottom-2.png" alt="">
+                                        </div>
+                                        <div class="swiper__course-detail">
+                                            <h3 class="title">
+                                                PEN-C Sinh học
+                                            </h3>
+                                            <p class="teacher">
+                                                Giáo viên:
+                                                <span>
+                                                    Thầy Nguyễn Thành Công
+                                                </span>
+                                            </p>
+                                            <ul class="list">
+                                                <li class="list__item">
+                                                    <i class="fas fa-play-circle"></i>
+                                                    <span>110</span>
+                                                    Bài giảng
+                                                </li>
+                                                <li class="list__item">
+                                                    <i class="fas fa-question-circle"></i>
+                                                    <span>3300</span>
+                                                    Câu hỏi
+                                                </li>
+                                            </ul>
+                                            <button class="button">
+                                                Tìm hiểu thêm
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="swiper__course">
+                                        <div class="swiper__course-img">
+                                            <img src="./assets/img/index//main-thcs-slide-bottom-3.png" alt="">
+                                        </div>
+                                        <div class="swiper__course-detail">
+                                            <h3 class="title">
+                                                PEN-C Vật lí
+                                            </h3>
+                                            <p class="teacher">
+                                                Giáo viên:
+                                                <span>
+                                                    Thầy Đỗ Ngọc Hà
+                                                </span>
+                                            </p>
+                                            <ul class="list">
+                                                <li class="list__item">
+                                                    <i class="fas fa-play-circle"></i>
+                                                    <span>108</span>
+                                                    Bài giảng
+                                                </li>
+                                                <li class="list__item">
+                                                    <i class="fas fa-question-circle"></i>
+                                                    <span>4000</span>
+                                                    Câu hỏi
+                                                </li>
+                                            </ul>
+                                            <button class="button">
+                                                Tìm hiểu thêm
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="swiper__course">
+                                        <div class="swiper__course-img">
+                                            <img src="./assets/img/index//main-thcs-slide-bottom-4.png" alt="">
+                                        </div>
+                                        <div class="swiper__course-detail">
+                                            <h3 class="title">
+                                                PEN-C Tiếng anh
+                                            </h3>
+                                            <p class="teacher">
+                                                Giáo viên:
+                                                <span>
+                                                    Cô Hương Fiona
+                                                </span>
+                                            </p>
+                                            <ul class="list">
+                                                <li class="list__item">
+                                                    <i class="fas fa-play-circle"></i>
+                                                    <span>64</span>
+                                                    Bài giảng
+                                                </li>
+                                                <li class="list__item">
+                                                    <i class="fas fa-question-circle"></i>
+                                                    <span>1500</span>
+                                                    Câu hỏi
+                                                </li>
+                                            </ul>
+                                            <button class="button">
+                                                Tìm hiểu thêm
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="swiper__course">
+                                        <div class="swiper__course-img">
+                                            <img src="./assets/img/index//main-thcs-slide-bottom-5.png" alt="">
+                                        </div>
+                                        <div class="swiper__course-detail">
+                                            <h3 class="title">
+                                                Ôn luyện Toán 10
+                                            </h3>
+                                            <p class="teacher">
+                                                Giáo viên:
+                                                <span>
+                                                    Thầy Nguyễn Mạnh Cường
+                                                </span>
+                                            </p>
+                                            <ul class="list">
+                                                <li class="list__item">
+                                                    <i class="fas fa-play-circle"></i>
+                                                    <span>50</span>
+                                                    Bài giảng
+                                                </li>
+                                                <li class="list__item">
+                                                    <i class="fas fa-question-circle"></i>
+                                                    <span>1000</span>
+                                                    Câu hỏi
+                                                </li>
+                                            </ul>
+                                            <button class="button">
+                                                Tìm hiểu thêm
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Add Navigation Buttons -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN TH -->
+    <div class="main-th">
+        <div class="container">
+            <div class="row no-gutters">
+                <h2 class="breakcrumb-top">
+                    Tiểu học
+                </h2>
+            </div>
+            <div class="row no-gutters">
+                <div class="main-thpt__top">
+                    <div class="thumb">
+                        <img src="./assets/img/index/main-th-banner.png" class="w-100 h-100" alt="banner">
+                    </div>
+                    <div class="swiper">
+                        <!-- Add Swiper JS -->
+                        <div class="swiper-container main-thpt__top-swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="swiper__course">
+                                        <div class="swiper__course-img">
+                                            <img src="./assets/img/index/main-th-top-slide-1.png" alt="">
+                                        </div>
+                                        <div class="swiper__course-detail">
+                                            <h3 class="title">
+                                                Ôn luyện Toán 10
+                                            </h3>
+                                            <p class="teacher">
+                                                Giáo viên:
+                                                <span>
+                                                    Thầy Nguyễn Mạnh Cường
+                                                </span>
+                                            </p>
+                                            <ul class="list">
+                                                <li class="list__item">
+                                                    <i class="fas fa-play-circle"></i>
+                                                    <span>50</span>
+                                                    Bài giảng
+                                                </li>
+                                                <li class="list__item">
+                                                    <i class="fas fa-question-circle"></i>
+                                                    <span>1000</span>
+                                                    Câu hỏi
+                                                </li>
+                                            </ul>
+                                            <button class="button">
+                                                Tìm hiểu thêm
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="swiper__course">
+                                        <div class="swiper__course-img">
+                                            <img src="./assets/img/index/main-th-top-slide-2.png" alt="">
+                                        </div>
+                                        <div class="swiper__course-detail">
+                                            <h3 class="title">
+                                                Ôn luyện Tiếng Anh 10
+                                            </h3>
+                                            <p class="teacher">
+                                                Giáo viên:
+                                                <span>
+                                                    Thầy Nguyễn Trung Nguyên
+                                                </span>
+                                            </p>
+                                            <ul class="list">
+                                                <li class="list__item">
+                                                    <i class="fas fa-play-circle"></i>
+                                                    <span>20</span>
+                                                    Bài giảng
+                                                </li>
+                                                <li class="list__item">
+                                                    <i class="fas fa-question-circle"></i>
+                                                    <span>600</span>
+                                                    Câu hỏi
+                                                </li>
+                                            </ul>
+                                            <button class="button">
+                                                Tìm hiểu thêm
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="swiper__course">
+                                        <div class="swiper__course-img">
+                                            <img src="./assets/img/index/main-th-top-slide-3.png" alt="">
+                                        </div>
+                                        <div class="swiper__course-detail">
+                                            <h3 class="title">
+                                                Ôn luyện Vật lí 10
+                                            </h3>
+                                            <p class="teacher">
+                                                Giáo viên:
+                                                <span>
+                                                    Thầy Nguyễn Mạnh Cường
+                                                </span>
+                                            </p>
+                                            <ul class="list">
+                                                <li class="list__item">
+                                                    <i class="fas fa-play-circle"></i>
+                                                    <span>50</span>
+                                                    Bài giảng
+                                                </li>
+                                                <li class="list__item">
+                                                    <i class="fas fa-question-circle"></i>
+                                                    <span>1000</span>
+                                                    Câu hỏi
+                                                </li>
+                                            </ul>
+                                            <button class="button">
+                                                Tìm hiểu thêm
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="swiper__course">
+                                        <div class="swiper__course-img">
+                                            <img src="./assets/img/index/main-th-top-slide-4.png" alt="">
+                                        </div>
+                                        <div class="swiper__course-detail">
+                                            <h3 class="title">
+                                                Ôn luyện Tiếng Anh 10 (hệ 7 năm)
+                                            </h3>
+                                            <p class="teacher">
+                                                Giáo viên:
+                                                <span>
+                                                    Cô Nguyễn Kiều Oanh
+                                                </span>
+                                            </p>
+                                            <ul class="list">
+                                                <li class="list__item">
+                                                    <i class="fas fa-play-circle"></i>
+                                                    <span>32</span>
+                                                    Bài giảng
+                                                </li>
+                                                <li class="list__item">
+                                                    <i class="fas fa-question-circle"></i>
+                                                    <span>9000</span>
+                                                    Câu hỏi
+                                                </li>
+                                            </ul>
+                                            <button class="button">
+                                                Tìm hiểu thêm
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Add Navigation Buttons -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row no-gutters">
+                <h2 class="breakcrumb-bottom">
+                    Các khóa học phổ biến
+                </h2>
+            </div>
+            <div class="row no-gutters">
+                <div class="main-thpt__bottom">
+                    <!-- Add swiper -->
+                    <div class="swiper">
+                        <div class="swiper-container main-thpt__bottom-swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="swiper__course">
+                                        <div class="swiper__course-img">
+                                            <img src="./assets/img/index/main-th-bottom-slide-1.png" alt="">
+                                        </div>
+                                        <div class="swiper__course-detail">
+                                            <h3 class="title">
+                                                PEN-C Toán
+                                            </h3>
+                                            <p class="teacher">
+                                                Giáo viên:
+                                                <span>
+                                                    Thầy Lê Trần Bá Phương
+                                                </span>
+                                            </p>
+                                            <ul class="list">
+                                                <li class="list__item">
+                                                    <i class="fas fa-play-circle"></i>
+                                                    <span>119</span>
+                                                    Bài giảng
+                                                </li>
+                                                <li class="list__item">
+                                                    <i class="fas fa-question-circle"></i>
+                                                    <span>2000</span>
+                                                    Câu hỏi
+                                                </li>
+                                            </ul>
+                                            <button class="button">
+                                                Tìm hiểu thêm
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="swiper__course">
+                                        <div class="swiper__course-img">
+                                            <img src="./assets/img/index//main-th-bottom-slide-2.png" alt="">
+                                        </div>
+                                        <div class="swiper__course-detail">
+                                            <h3 class="title">
+                                                PEN-C Sinh học
+                                            </h3>
+                                            <p class="teacher">
+                                                Giáo viên:
+                                                <span>
+                                                    Thầy Nguyễn Thành Công
+                                                </span>
+                                            </p>
+                                            <ul class="list">
+                                                <li class="list__item">
+                                                    <i class="fas fa-play-circle"></i>
+                                                    <span>110</span>
+                                                    Bài giảng
+                                                </li>
+                                                <li class="list__item">
+                                                    <i class="fas fa-question-circle"></i>
+                                                    <span>3300</span>
+                                                    Câu hỏi
+                                                </li>
+                                            </ul>
+                                            <button class="button">
+                                                Tìm hiểu thêm
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="swiper__course">
+                                        <div class="swiper__course-img">
+                                            <img src="./assets/img/index//main-th-bottom-slide-3.png" alt="">
+                                        </div>
+                                        <div class="swiper__course-detail">
+                                            <h3 class="title">
+                                                PEN-C Vật lí
+                                            </h3>
+                                            <p class="teacher">
+                                                Giáo viên:
+                                                <span>
+                                                    Thầy Đỗ Ngọc Hà
+                                                </span>
+                                            </p>
+                                            <ul class="list">
+                                                <li class="list__item">
+                                                    <i class="fas fa-play-circle"></i>
+                                                    <span>108</span>
+                                                    Bài giảng
+                                                </li>
+                                                <li class="list__item">
+                                                    <i class="fas fa-question-circle"></i>
+                                                    <span>4000</span>
+                                                    Câu hỏi
+                                                </li>
+                                            </ul>
+                                            <button class="button">
+                                                Tìm hiểu thêm
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="swiper__course">
+                                        <div class="swiper__course-img">
+                                            <img src="./assets/img/index//main-th-bottom-slide-4.png" alt="">
+                                        </div>
+                                        <div class="swiper__course-detail">
+                                            <h3 class="title">
+                                                PEN-C Tiếng anh
+                                            </h3>
+                                            <p class="teacher">
+                                                Giáo viên:
+                                                <span>
+                                                    Cô Hương Fiona
+                                                </span>
+                                            </p>
+                                            <ul class="list">
+                                                <li class="list__item">
+                                                    <i class="fas fa-play-circle"></i>
+                                                    <span>64</span>
+                                                    Bài giảng
+                                                </li>
+                                                <li class="list__item">
+                                                    <i class="fas fa-question-circle"></i>
+                                                    <span>1500</span>
+                                                    Câu hỏi
+                                                </li>
+                                            </ul>
+                                            <button class="button">
+                                                Tìm hiểu thêm
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="swiper__course">
+                                        <div class="swiper__course-img">
+                                            <img src="./assets/img/index//main-th-bottom-slide-5.png" alt="">
+                                        </div>
+                                        <div class="swiper__course-detail">
+                                            <h3 class="title">
+                                                Ôn luyện Toán 10
+                                            </h3>
+                                            <p class="teacher">
+                                                Giáo viên:
+                                                <span>
+                                                    Thầy Nguyễn Mạnh Cường
+                                                </span>
+                                            </p>
+                                            <ul class="list">
+                                                <li class="list__item">
+                                                    <i class="fas fa-play-circle"></i>
+                                                    <span>50</span>
+                                                    Bài giảng
+                                                </li>
+                                                <li class="list__item">
+                                                    <i class="fas fa-question-circle"></i>
+                                                    <span>1000</span>
+                                                    Câu hỏi
+                                                </li>
+                                            </ul>
+                                            <button class="button">
+                                                Tìm hiểu thêm
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Add Navigation Buttons -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ABOUT -->
+    <div class="about">
+        <div class="container">
+            <div class="row no-gutters lg:fxd-column">
+                <div class="about__left">
+                    <h3 class="about__left-title">
+                        Lắng nghe và chia sẻ
+                    </h3>
+                    <div class="swiper">
+                        <div class="swiper-container about__swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="feedback">
+                                        <div class="feedback__top">
+                                            <div class="feedback__top-img">
+                                                <img src="./assets/img/index/feed-back-1.jpg" class="w-100 h-100" alt="">
+                                            </div>
+                                            <div class="feedback__top-info">
+                                                <h4>
+                                                    Võ Vân Khánh
+                                                </h4>
+                                                <p>
+                                                    Tài khoản hocmai.vn: Khanhvv@gmail.com
+                                                </p>
+                                                <p>
+                                                    Điểm tổng kết hóa 11: 9.1
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="feedback__content">
+                                            Em cảm ơn thầy Ngọc đã giúp em từ một đứa lên 11 mới nhận thức rõ cần phải học, mất gốc Hóa trầm... 
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="feedback">
+                                        <div class="feedback__top">
+                                            <div class="feedback__top-img">
+                                                <img src="./assets/img/index/feed-back-2.jpg" class="w-100 h-100" alt="">
+                                            </div>
+                                            <div class="feedback__top-info">
+                                                <h4>
+                                                    Võ Vân Khánh
+                                                </h4>
+                                                <p>
+                                                    Tài khoản hocmai.vn: Khanhvv@gmail.com
+                                                </p>
+                                                <p>
+                                                    Điểm tổng kết hóa 11: 9.1
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="feedback__content">
+                                            Em cảm ơn thầy Ngọc đã giúp em từ một đứa lên 11 mới nhận thức rõ cần phải học, mất gốc Hóa trầm... 
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="feedback">
+                                        <div class="feedback__top">
+                                            <div class="feedback__top-img">
+                                                <img src="./assets/img/index/feed-back-3.jpg" class="w-100 h-100" alt="">
+                                            </div>
+                                            <div class="feedback__top-info">
+                                                <h4>
+                                                    Võ Vân Khánh
+                                                </h4>
+                                                <p>
+                                                    Tài khoản hocmai.vn: Khanhvv@gmail.com
+                                                </p>
+                                                <p>
+                                                    Điểm tổng kết hóa 11: 9.1
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="feedback__content">
+                                            Em cảm ơn thầy Ngọc đã giúp em từ một đứa lên 11 mới nhận thức rõ cần phải học, mất gốc Hóa trầm... 
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="feedback">
+                                        <div class="feedback__top">
+                                            <div class="feedback__top-img">
+                                                <img src="./assets/img/index/feed-back-4.jpg" class="w-100 h-100" alt="">
+                                            </div>
+                                            <div class="feedback__top-info">
+                                                <h4>
+                                                    Võ Vân Khánh
+                                                </h4>
+                                                <p>
+                                                    Tài khoản hocmai.vn: Khanhvv@gmail.com
+                                                </p>
+                                                <p>
+                                                    Điểm tổng kết hóa 11: 9.1
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="feedback__content">
+                                            Em cảm ơn thầy Ngọc đã giúp em từ một đứa lên 11 mới nhận thức rõ cần phải học, mất gốc Hóa trầm... 
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="feedback">
+                                        <div class="feedback__top">
+                                            <div class="feedback__top-img">
+                                                <img src="./assets/img/index/feed-back-5.jpg" class="w-100 h-100" alt="">
+                                            </div>
+                                            <div class="feedback__top-info">
+                                                <h4>
+                                                    Võ Vân Khánh
+                                                </h4>
+                                                <p>
+                                                    Tài khoản hocmai.vn: Khanhvv@gmail.com
+                                                </p>
+                                                <p>
+                                                    Điểm tổng kết hóa 11: 9.1
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="feedback__content">
+                                            Em cảm ơn thầy Ngọc đã giúp em từ một đứa lên 11 mới nhận thức rõ cần phải học, mất gốc Hóa trầm... 
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="feedback">
+                                        <div class="feedback__top">
+                                            <div class="feedback__top-img">
+                                                <img src="./assets/img/index/feed-back-6.png" class="w-100 h-100" alt="">
+                                            </div>
+                                            <div class="feedback__top-info">
+                                                <h4>
+                                                    Võ Vân Khánh
+                                                </h4>
+                                                <p>
+                                                    Tài khoản hocmai.vn: Khanhvv@gmail.com
+                                                </p>
+                                                <p>
+                                                    Điểm tổng kết hóa 11: 9.1
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="feedback__content">
+                                            Em cảm ơn thầy Ngọc đã giúp em từ một đứa lên 11 mới nhận thức rõ cần phải học, mất gốc Hóa trầm... 
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>                    
+                </div>
+                <div class="about__right">
+                    <h3 class="about__right-title">
+                        Các tin tức giáo dục
+                    </h3>
+                    <div class="info">
+                        <div class="info__top">
+                            <div class="info__top-img">
+                                <img src="./assets/img/index/about-info.jpg" alt="">
+                            </div>
+                            <ul class="info__top-list">
+                                <li class="item">
+                                    <p>
+                                        4 nguyên nhân khiến học sinh lớp 6 lười học Cha mẹ cần biết
+                                    </p>
+                                </li>
+                                <li class="item">
+                                    <p>
+                                        CEO 9x là cựu học sinh của HOCMAI chia sẻ về học trực tuyến 
+                                    </p>
+                                </li>
+                                <li class="item">
+                                    <p>
+                                        Giải pháp dạy và học trực tuyến hiệu quả
+                                    </p>
+                                </li>
+                                <li class="item">
+                                    <p>
+                                        Nền tảng Hocmai.vn giành giải thưởng 
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="info__content">
+                            HOCMAI phân tích thuận lợi và khó khăn khi học trực tuyến
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+        <div class="footer__top">
+            <div class="container">
+                <div class="row no-gutters">
+                    <div class="footer__top-box">
+                        <ul class="list">
+                            <div class="list__logo">
+                                <img src="./assets/img/index/logo-bg-hocmai-text.png" alt="">
+                            </div>
+                            <div class="list__caption">
+                                Về học mãi
+                            </div>
+                            <div class="list__wrap">
+                                <li class="list__wrap-item">
+                                    Giới thiệu
+                                </li>
+                                <li class="list__wrap-item">
+                                    Phòng truyền thống
+                                </li>
+                                <li class="list__wrap-item">
+                                    Học sinh tiêu biểu
+                                </li>
+                                <li class="list__wrap-item">
+                                    Điều khoản chính sách
+                                </li>
+                                <li class="list__wrap-item">
+                                    Quy chế hoạt động
+                                </li>
+                                <li class="list__wrap-item">
+                                    Chính sách bảo mật thông tin
+                                </li>
+                                <li class="list__wrap-item">
+                                    Giải quyết khiếu nại
+                                </li>
+                                <li class="list__wrap-item">
+                                    Tuyển dụng
+                                </li>
+                            </div>
+                            
+                        </ul>
+                        <ul class="list">
+                            <div class="list__caption">
+                                Chương trình học tiêu biểu
+                            </div>
+                            <div class="list__wrap">
+                                <li class="list__wrap-item">
+                                    Học tốt - Học toàn diện từ lớp 1-12
+                                </li>
+                                <li class="list__wrap-item">
+                                    PEN - Luyện thi đại học
+                                </li>
+                                <li class="list__wrap-item">
+                                    HM10 - Luyện thi vào lớp 10
+                                </li>
+                                <li class="list__wrap-item">
+                                    HM6 - Luyện thi vào lớp 6 CLC
+                                </li>
+                                <li class="list__wrap-item">
+                                    Speakup - Tiếng Anh Online 1 kèm 1
+                                </li>
+                                <li class="list__wrap-item">
+                                    Xiso - Trường học lập trình trực tuyến
+                                </li>
+                                <li class="list__wrap-item">
+                                    Học hay
+                                </li>
+                                <li class="list__wrap-item">
+                                    XBook - Sách hay từ lớp 1-12
+                                </li>
+                            </div>
+                        </ul>
+                        <ul class="list">
+                            <div class="list__caption">                                
+                                Dịch vụ hỗ trợ học tập
+                            </div>
+                            <div class="list__wrap">
+                                <li class="list__wrap-item">
+                                    Diễn đàn học tập
+                                </li>
+                                <li class="list__wrap-item">
+                                    Thư viện học liệu
+                                </li>   
+                                <li class="list__wrap-item">
+                                    Thông tin tuyển sinh ĐH
+                                </li>
+                                <li class="list__wrap-item">
+                                    Blog góc học sinh
+                                </li>
+                                <li class="list__wrap-item">
+                                    Blog góc phụ huynh
+                                </li>
+                                <li class="list__wrap-item">
+                                    Kiểm tra, thi thử
+                                </li>
+                            </div>
+                        </ul>
+                        <ul class="list">
+                            <div class="list__caption">                                
+                                Khách hàng/Đối tác
+                            </div>
+                            <div class="list__wrap">
+                                <li class="list__wrap-item">
+                                    Liên hệ
+                                </li>
+                                <li class="list__wrap-item">
+                                    Góp ý về dịch vụ
+                                </li>
+                                <li class="list__wrap-item">
+                                    Giải đáp thắc mắc
+                                </li>
+                            </div>
+                        </ul>
+                        <ul class="list">
+                            <div class="list__caption">                                
+                                TẢI ỨNG DỤNG
+                            </div>
+                            <li class="list__app-chplay">
+                                <img src="./assets/img/index/footer-google-app.png" alt="">
+                            </li>
+                            <li class="list__app-store">
+                                <img src="./assets/img/index/footer-store-app.png" alt="">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="container">
+                <div class="row no-gutters jc-space-between w-100">
+                    <div class="footer__bottom-left">
+                        <p>
+                            Cơ quan chủ quản: Công ty Cổ phần Đầu tư và Dịch vụ Giáo dục
+                        </p>
+                        <p>
+                            MST: 0102183602 do Sở kế hoạch và Đầu tư thành phố Hà Nội cấp ngày 13 tháng 03 năm 2007
+                        </p>
+                        <p>
+                            Địa chỉ:
+                        </p>
+                        <p>
+                            - Văn phòng Hà Nội: Tầng 4, Tòa nhà 25T2, Đường Nguyễn Thị Thập, Phường Trung Hoà, Quận Cầu Giấy, Hà Nội.
+                        </p>
+                        <p>
+                            - Văn phòng TP.HCM: 13M đường số 14 khu đô thị Miếu Nổi, Phường 3, Quận Bình Thạnh, TP. Hồ Chí Minh
+                        </p>
+                        <p>
+                            Hotline: 19006933 – Email: hotro@hocmai.vn
+                        </p>
+                        <p>
+                            Chịu trách nhiệm nội dung: Phạm Giang Linh
+                        </p>
+                    </div>
+                    <div class="footer__bottom-right">
+                        <img src="./assets/img/index/logo-register.png" alt="">
+                        <p>
+                            Giấy phép cung cấp dịch vụ mạng xã hội trực tuyến số 597/GP-BTTTT Bộ Thông tin và Truyền thông cấp ngày 30/12/2016.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- JQUERY -->
+    <script src="./assets/js/plugin/jquery-3.5.1.js"></script>
+    <!-- FONT AWESOME -->
+    <script src="./assets/js/plugin/all.min.js"></script>
+    <!-- OWL CAROUSE -->
+    <script src="./assets/js/plugin/owl.carousel.min.js"></script>
+    <!-- SWIPER SLIDER -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- LONG LIST TRUNCATION -->
+    <script src="./assets/js/plugin/show-more-items.js"></script>
+    <!-- INDEX -->
+    <script src="./assets/js/index.js"></script>
+</body>
+</html>
