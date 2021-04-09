@@ -2512,11 +2512,11 @@ html {
                     .item {
                         p {
                             position: relative;
-                            margin-top: 4rem;
+                            margin-top: 3rem;
                             font-size: 1.4rem;
                             color: #444;
                             display:-webkit-box;
-                            -webkit-line-clamp: 1;
+                            -webkit-line-clamp: 2;
                             -webkit-box-orient: vertical;
                             overflow: hidden;
                             text-overflow: ellipsis;
@@ -2544,7 +2544,7 @@ html {
                 padding: 2rem 1.5rem;
                 > p {
                     display:-webkit-box;
-                    -webkit-line-clamp: 1;
+                    -webkit-line-clamp: 2;
                     -webkit-box-orient: vertical;
                     overflow: hidden;
                     text-overflow: ellipsis;
