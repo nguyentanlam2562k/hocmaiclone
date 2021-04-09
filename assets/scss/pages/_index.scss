@@ -2411,6 +2411,7 @@ html {
                         border: 1px solid #888;
                         border-radius: 50%;
                         overflow: hidden;
+                        
                         @include maxWidth($LG) {
                             width: 8rem;
                             height: 8rem;
@@ -2444,8 +2445,6 @@ html {
                     margin-bottom: 4rem;
                     font-size: 1.6rem;
                     color: #888;
-                    -webkit-line-clamp: 2;
-                    text-overflow: ellipsis;
                     @include maxWidth($LG) {
                         padding-left: 4rem;
                         margin: 1rem 0 1.5rem;
@@ -2501,6 +2500,7 @@ html {
                         max-height: 25rem;
                         height: 100%;
                         display: block;
+                        object-fit: cover;
                     }
                 }
                 &-list {
@@ -2512,13 +2512,16 @@ html {
                     .item {
                         p {
                             position: relative;
-                            margin-top: 4rem;
+                            margin-top: 3rem;
                             font-size: 1.4rem;
                             color: #444;
-                            text-overflow: ellipsis;
-                            -webkit-line-clamp: 1;
-                            display: -webkit-box;
+                            display:-webkit-box;
+                            -webkit-line-clamp: 2;
                             -webkit-box-orient: vertical;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            width: 100%;
+                            max-width: 100%;
                             &::before {
                                 position: absolute;
                                 top: .4rem;
@@ -2529,18 +2532,26 @@ html {
                                 height: 0.5rem;
                                 border-radius: 50%;
                                 background-color: #0F78BA;
+                                z-index: 10;
                             }
                         }
                     }
                 }
             }
             &__content {
-                margin-top: 2rem;
-                margin-left: 1.5rem;
                 color: #444;
                 font-size: 1.8rem;
-                max-width: 38rem;
-                width: 100%;
+                padding: 2rem 1.5rem;
+                > p {
+                    display:-webkit-box;
+                    -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    width: 100%;
+                    max-width: 38rem;
+
+                }
             }
         }
     }
